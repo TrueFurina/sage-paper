@@ -1,0 +1,12 @@
+# 本仓库含大量中文/英文混排的 Markdown 与表格。
+# 关闭一切行尾自动转换（-text 表示"当二进制文本处理，不做 CRLF/LF 归一化"），
+# 避免每次编辑产生整文件级的假 diff —— 本工作区曾因行尾差异误判"文件被改坏"。
+* -text
+
+# 明确标记为二进制
+*.pdf binary
+*.docx binary
+*.ttf binary
+*.png binary
+*.jpg binary
+*.zip binary

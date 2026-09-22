@@ -1,0 +1,90 @@
+# 清理续跑记录 (resume)
+
+待删文件: 73
+待删目录: 4
+
+DEL   _cleanup_manifest.txt                    70 B
+DEL   _ld_sensitivity_0.45.out                482 B
+DEL   _ld_sensitivity_0.50.out                480 B
+DEL   _ld_sensitivity_0.60.out                480 B
+DEL   _ld_sensitivity_0.70.out                480 B
+DEL   _ld_summary.out                        1510 B
+DEL   _mem_append.py                         4703 B
+DEL   _merge13.py                           16490 B
+DEL   _merge13_report.txt                     489 B
+DEL   _read_docx.py                          1330 B
+DEL   _rebuild13.py                          5043 B
+DEL   _rec13_diff1.txt                     137312 B
+DEL   _rec13_diff2.txt                          0 B
+DEL   _rec13_new.txt                        68357 B
+DEL   _rec13_old.txt                        55475 B
+DEL   _rec13_snapshot.txt                   68163 B
+DEL   _rec13_snapshot_other.txt             68163 B
+DEL   _rec3_report.txt                       7828 B
+DEL   _rec4_report.txt                      15343 B
+DEL   _rec6.out                              6982 B
+DEL   _rec6.py                               2586 B
+DEL   _rec_mine.txt                         52526 B
+DEL   _rec_other.txt                        52526 B
+DEL   _rec_s1.txt                           24721 B
+DEL   _rec_s2.txt                           36512 B
+DEL   _rec_s3.txt                           29754 B
+DEL   _rec_s4.txt                           33564 B
+DEL   _recent.log                            1088 B
+DEL   _recover.py                            1433 B
+DEL   _recover2.py                           1436 B
+DEL   _recover3.py                           1998 B
+DEL   _recover4.py                           2361 B
+DEL   _recover5.py                           2161 B
+DEL   _recover_mine.json                   106000 B
+DEL   _recover_other.json                  105999 B
+DEL   _recover_report.txt                    5651 B
+DEL   _recover_s1.json                      33214 B
+DEL   _recover_s2.json                      73951 B
+DEL   _recover_s3.json                      60408 B
+DEL   _recover_s4.json                      68040 B
+DEL   _recover_scan.txt                       662 B
+DEL   _render01.log                           208 B
+DEL   _render13.log                           218 B
+DEL   _render_batch.log                       609 B
+DEL   _rerender.log                          4839 B
+DEL   _rerender2.log                         4277 B
+DEL   _rerender3.log                         3837 B
+DEL   _rerun_40seed.log                      4089 B
+DEL   _restore13.py                         20859 B
+DEL   _scan_out.txt                           466 B
+DEL   _snap_lf.txt                          67969 B
+DEL   _tmp_01.txt                            1781 B
+DEL   _tmp_anch.out                           724 B
+DEL   _tmp_anch2.out                          448 B
+DEL   _tmp_bib.out                          17351 B
+DEL   _tmp_bib.py                            1589 B
+DEL   _tmp_cand.out                           576 B
+DEL   _tmp_dl2.out                            174 B
+DEL   _tmp_edu.out                           5392 B
+DEL   _tmp_h2.txt                            4831 B
+DEL   _tmp_pf.out                           33967 B
+DEL   _tmp_puech.out                        10009 B
+DEL   _tmp_refmine.out                      29844 B
+DEL   _tmp_refmine.py                        1585 B
+DEL   _tmp_scan2.out                        69334 B
+DEL   _tmp_sec.txt                          19461 B
+DEL   _tmp_t7.out                            3256 B
+DEL   _tmp_v13.txt                          14452 B
+DEL   _tmp_ver2.txt                          5169 B
+DEL   _verify_2604.out                        122 B
+DEL   _verify_2604.py                        2410 B
+DEL   _verify_a.txt                          3325 B
+DEL   _write_round2.py                       5794 B
+
+RMDIR __pycache__                         13 文件 / 0.18 MB
+RMDIR _archive/snap_20260922_0845         30 文件 / 0.65 MB
+RMDIR _archive/snap_20260922_0850          2 文件 / 0.14 MB
+RMDIR _archive/408_assets_for_studyhelp    1 文件 / 0.00 MB
+DEL   _archive/05_论文大纲_v2.html              15092 B
+DEL   _archive/05_论文大纲_v2.pdf              917249 B
+RMDIR _archive                           (已空)
+
+复核: 应删未删 = 0 
+复核: 应留却缺 = 0 
+异常 = 0 

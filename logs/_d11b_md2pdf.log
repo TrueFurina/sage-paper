@@ -1,0 +1,41 @@
+[subset] shipped subset does not cover all sources -> rebuilding
+[subset] source=msyh.ttc chars=1452 -> target=_sage_subset.ttf
+MERG NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+[subset] CJK subset -> 833 KB
+[subset] coverage OK: every rendered char is in the subset (no fallback font will be embedded)
+[subset] wrote E:\Program\MARL\SAGE\_sage_subset.ttf (833 KB, from 18.8 MB)
+
+[*] FEDC投稿_引导式多智能体_深度研究报告.md  (15142 chars)
+    -> E:\Program\MARL\SAGE\pdf\FEDC投稿_引导式多智能体_深度研究报告.pdf  (1057 KB, engine=pymupdf)
+[*] README.md  (7675 chars)
+    -> E:\Program\MARL\SAGE\pdf\README.pdf  (1020 KB, engine=pymupdf)
+[*] 00_定位与口径_术语翻译表.md  (5358 chars)
+    -> E:\Program\MARL\SAGE\pdf\00_定位与口径_术语翻译表.pdf  (957 KB, engine=pymupdf)
+[*] 01_theoretical_framework_en.md  (14899 chars)
+    -> E:\Program\MARL\SAGE\pdf\01_theoretical_framework_en.pdf  (983 KB, engine=pymupdf)
+[*] 02_系统架构与交互协议.md  (2579 chars)
+    -> E:\Program\MARL\SAGE\pdf\02_系统架构与交互协议.pdf  (925 KB, engine=pymupdf)
+[*] 03_408知识图谱骨架.md  (2474 chars)
+    -> E:\Program\MARL\SAGE\pdf\03_408知识图谱骨架.pdf  (917 KB, engine=pymupdf)
+[*] 04_题库方案与测量.md  (3295 chars)
+    -> E:\Program\MARL\SAGE\pdf\04_题库方案与测量.pdf  (907 KB, engine=pymupdf)
+[*] 05_论文大纲.md  (5534 chars)
+    -> E:\Program\MARL\SAGE\pdf\05_论文大纲.pdf  (930 KB, engine=pymupdf)
+[*] 06_苏格拉底引导代表作精读与缺口分析.md  (15373 chars)
+    -> E:\Program\MARL\SAGE\pdf\06_苏格拉底引导代表作精读与缺口分析.pdf  (1134 KB, engine=pymupdf)
+[*] 07_Introduction动机链_原文证据锚定.md  (39150 chars)
+    -> E:\Program\MARL\SAGE\pdf\07_Introduction动机链_原文证据锚定.pdf  (1450 KB, engine=pymupdf)
+[*] 08_M2实验审计记录.md  (18104 chars)
+    -> E:\Program\MARL\SAGE\pdf\08_M2实验审计记录.pdf  (1284 KB, engine=pymupdf)
+[*] 09_方向决策备忘.md  (23388 chars)
+    -> E:\Program\MARL\SAGE\pdf\09_方向决策备忘.pdf  (1442 KB, engine=pymupdf)
+[*] 10_汇报_选题过程_微信版.md  (3744 chars)
+    -> E:\Program\MARL\SAGE\pdf\10_汇报_选题过程_微信版.pdf  (870 KB, engine=pymupdf)
+[*] 11_论文成稿进度地图.md  (3037 chars)
+    -> E:\Program\MARL\SAGE\pdf\11_论文成稿进度地图.pdf  (939 KB, engine=pymupdf)
+[*] 12_待决策清单.md  (8628 chars)
+    -> E:\Program\MARL\SAGE\pdf\12_待决策清单.pdf  (1079 KB, engine=pymupdf)
+
+[done] 15 ok, 0 failed
+  output dir: E:\Program\MARL\SAGE\pdf

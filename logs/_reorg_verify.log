@@ -1,0 +1,16 @@
+OK   FEDC投稿_引导式多智能体_深度研究报告                        pages=8   chars=10353   draw=1033  hits=6/6
+OK   README                                       pages=4   chars=5447    draw=814   hits=3/3
+OK   00_定位与口径_术语翻译表                               pages=3   chars=3994    draw=908   hits=4/4
+OK   01_theoretical_framework_en                  pages=5   chars=14374   draw=413   hits=4/4
+OK   02_系统架构与交互协议                                 pages=2   chars=2264    draw=1212  hits=4/4
+OK   03_408知识图谱骨架                                 pages=3   chars=1960    draw=888   hits=4/4
+OK   04_题库方案与测量                                   pages=3   chars=2890    draw=485   hits=4/4
+OK   05_论文大纲                                      pages=4   chars=4924    draw=151   hits=6/6
+OK   06_苏格拉底引导代表作精读与缺口分析                          pages=8   chars=12543   draw=701   hits=5/5
+OK   07_Introduction动机链_原文证据锚定                    pages=14  chars=34256   draw=435   hits=9/9
+OK   08_M2实验审计记录                                  pages=11  chars=15430   draw=2117  hits=7/7
+OK   09_方向决策备忘                                    pages=12  chars=16230   draw=1261  hits=7/7
+OK   10_汇报_选题过程_微信版                               pages=2   chars=1755    draw=0     hits=6/6
+OK   11_论文成稿进度地图                                  pages=3   chars=2378    draw=841   hits=6/6
+
+[verify] 14/14 PDFs pass content check

@@ -1,0 +1,50 @@
+[M2] graph: 27 nodes, 25 prereq edges
+[M2] seeds=40 learners=240 problems/learner=25
+[M2] fitting answer-channel bias theta (target ALR=0.85 at lambda=0)...
+[M2] theta = 0.3578
+----------------------------------------------------------------------------------------------------
+ lambda |                ALR |        earned gain |        leak-solves |       never solved
+--------------------------------------------------------------------------------------------------------
+  0.000 | 0.8524 [0.851,0.854] | 0.1279 [0.126,0.129] | 0.6700 [0.668,0.672] | 0.2020 [0.200,0.204]
+  0.005 | 0.8417 [0.840,0.843] | 0.1357 [0.134,0.137] | 0.6616 [0.660,0.664] | 0.2027 [0.201,0.204]
+  0.010 | 0.8329 [0.831,0.835] | 0.1423 [0.140,0.144] | 0.6551 [0.653,0.658] | 0.2025 [0.201,0.205]
+  0.020 | 0.8084 [0.806,0.810] | 0.1607 [0.159,0.163] | 0.6385 [0.636,0.641] | 0.2009 [0.199,0.203]
+  0.030 | 0.7848 [0.783,0.786] | 0.1785 [0.177,0.180] | 0.6198 [0.618,0.622] | 0.2016 [0.200,0.204]
+  0.050 | 0.7272 [0.725,0.729] | 0.2197 [0.218,0.221] | 0.5781 [0.576,0.580] | 0.2022 [0.201,0.204]
+  0.080 | 0.6343 [0.633,0.636] | 0.2820 [0.280,0.283] | 0.5075 [0.505,0.510] | 0.2105 [0.209,0.212]
+  0.100 | 0.5684 [0.566,0.571] | 0.3239 [0.321,0.326] | 0.4558 [0.453,0.458] | 0.2204 [0.218,0.222]
+  0.150 | 0.3978 [0.395,0.400] | 0.4187 [0.416,0.421] | 0.3236 [0.322,0.325] | 0.2576 [0.256,0.259]
+  0.200 | 0.2546 [0.253,0.256] | 0.4993 [0.497,0.502] | 0.2076 [0.206,0.209] | 0.2931 [0.291,0.295]
+  0.250 | 0.1547 [0.153,0.156] | 0.5472 [0.545,0.549] | 0.1266 [0.125,0.128] | 0.3263 [0.324,0.328]
+  0.300 | 0.0863 [0.085,0.088] | 0.5659 [0.564,0.568] | 0.0733 [0.072,0.075] | 0.3608 [0.359,0.363]
+  0.350 | 0.0519 [0.051,0.053] | 0.5502 [0.549,0.552] | 0.0436 [0.043,0.044] | 0.4062 [0.405,0.408]
+  0.400 | 0.0316 [0.031,0.032] | 0.4870 [0.485,0.489] | 0.0261 [0.025,0.027] | 0.4870 [0.485,0.489]
+  0.450 | 0.0199 [0.019,0.020] | 0.3862 [0.384,0.388] | 0.0165 [0.016,0.017] | 0.5973 [0.595,0.599]
+  0.500 | 0.0118 [0.011,0.012] | 0.3117 [0.310,0.314] | 0.0096 [0.009,0.010] | 0.6788 [0.677,0.681]
+  0.600 | 0.0038 [0.004,0.004] | 0.2705 [0.269,0.272] | 0.0030 [0.003,0.003] | 0.7265 [0.725,0.728]
+  0.700 | 0.0011 [0.001,0.001] | 0.2642 [0.263,0.266] | 0.0009 [0.001,0.001] | 0.7349 [0.733,0.736]
+  0.800 | 0.0004 [0.000,0.000] | 0.2651 [0.263,0.267] | 0.0003 [0.000,0.000] | 0.7347 [0.733,0.736]
+--------------------------------------------------------------------------------------------------------
+  'earned gain'  = solved WITHOUT any answer leak (far-transfer proxy)
+  'leak-solves'  = solved only because an answer was leaked (cheap)
+  'never solved' = neither route succeeded within the turn budget
+[M2] calibration gates:
+    ok   G1: ALR at lambda=0 = 0.852 (heavy leakage)
+    ok   G2: ALR falls 0.852 -> 0.000 as lambda rises
+    ok   G3: learning gain peaks at 0.566 (not saturated)
+    ok   G4: boundary located at lambda=0.3 (gain=0.566)
+    ok   G5: crossing the boundary degrades gain (0.566 at boundary -> 0.265 at lambda=0.8)
+
+[M2] Proposition 1 diagnostic (a withholding BOUNDARY, not a smooth optimum):
+     ALR: max 0.8524 @lambda=0.0, min 0.0004 @lambda=0.8
+     P1 boundary located at lambda=0.3 (index 11 of 0..18): PASS
+     P2 rising side: gain 0.1279 -> 0.5659 (delta +0.4380, need >= 0.02): PASS
+     P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS
+     P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, scaffolding share=86% (need >= 50%): PASS
+     P4 CI separation vs lambda=0: PASS (opt low 0.5638 vs base high 0.1294) [recorded, non-binding]
+     P5 CI separation vs lambda_max: PASS (opt low 0.5638 vs max high 0.2668) [recorded, non-binding]
+     => SUPPORTED: a withholding boundary is located at lambda* under this model (Proposition 1). Report the boundary LOCATION as an interval; only its EXISTENCE and the attribution share are A9-stable.
+
+[M2] raw     -> .\m2_lambda_alr_raw.csv
+[M2] summary -> .\m2_lambda_alr_summary.json
+MAIN_EXIT=0

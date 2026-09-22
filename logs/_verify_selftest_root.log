@@ -1,0 +1,76 @@
+[M2] graph: 27 nodes, 25 prereq edges
+[M2] seeds=8 learners=240 problems/learner=8
+[M2] fitting answer-channel bias theta (target ALR=0.85 at lambda=0)...
+[M2] theta = 0.0000
+----------------------------------------------------------------------------------------------------
+ lambda |                ALR |        earned gain |        leak-solves |       never solved
+--------------------------------------------------------------------------------------------------------
+  0.000 | 0.8502 [0.843,0.858] | 0.1113 [0.106,0.116] | 0.6223 [0.613,0.631] | 0.2665 [0.261,0.272]
+  0.005 | 0.8404 [0.832,0.848] | 0.1151 [0.107,0.123] | 0.6207 [0.608,0.634] | 0.2642 [0.256,0.273]
+  0.010 | 0.8251 [0.821,0.829] | 0.1225 [0.118,0.127] | 0.6098 [0.598,0.621] | 0.2677 [0.257,0.278]
+  0.020 | 0.8030 [0.798,0.808] | 0.1382 [0.131,0.145] | 0.5920 [0.585,0.599] | 0.2699 [0.262,0.278]
+  0.030 | 0.7794 [0.770,0.789] | 0.1505 [0.146,0.155] | 0.5743 [0.563,0.585] | 0.2753 [0.265,0.285]
+  0.050 | 0.7119 [0.705,0.719] | 0.1895 [0.180,0.199] | 0.5279 [0.520,0.536] | 0.2826 [0.273,0.292]
+  0.080 | 0.6295 [0.621,0.638] | 0.2282 [0.221,0.236] | 0.4726 [0.462,0.484] | 0.2992 [0.293,0.306]
+  0.100 | 0.5555 [0.546,0.565] | 0.2550 [0.246,0.264] | 0.4143 [0.408,0.421] | 0.3307 [0.325,0.337]
+  0.150 | 0.3837 [0.376,0.391] | 0.3115 [0.306,0.317] | 0.2908 [0.284,0.298] | 0.3977 [0.392,0.404]
+  0.200 | 0.2426 [0.239,0.246] | 0.3641 [0.357,0.371] | 0.1861 [0.182,0.190] | 0.4499 [0.440,0.460]
+  0.250 | 0.1463 [0.142,0.151] | 0.3909 [0.385,0.397] | 0.1113 [0.107,0.115] | 0.4978 [0.492,0.504]
+  0.300 | 0.0874 [0.082,0.093] | 0.4074 [0.404,0.411] | 0.0714 [0.067,0.075] | 0.5212 [0.516,0.527]
+  0.350 | 0.0505 [0.048,0.053] | 0.3969 [0.390,0.404] | 0.0407 [0.038,0.043] | 0.5624 [0.555,0.570]
+  0.400 | 0.0279 [0.026,0.030] | 0.3202 [0.315,0.325] | 0.0216 [0.020,0.023] | 0.6582 [0.653,0.664]
+  0.450 | 0.0190 [0.018,0.020] | 0.2289 [0.224,0.234] | 0.0148 [0.013,0.016] | 0.7563 [0.750,0.762]
+  0.500 | 0.0107 [0.009,0.012] | 0.1674 [0.160,0.175] | 0.0080 [0.007,0.009] | 0.8245 [0.818,0.831]
+  0.600 | 0.0032 [0.002,0.004] | 0.1411 [0.135,0.147] | 0.0024 [0.002,0.003] | 0.8565 [0.850,0.863]
+  0.700 | 0.0012 [0.001,0.002] | 0.1428 [0.136,0.149] | 0.0010 [0.001,0.001] | 0.8562 [0.850,0.862]
+  0.800 | 0.0003 [-0.000,0.001] | 0.1424 [0.138,0.146] | 0.0002 [0.000,0.000] | 0.8574 [0.853,0.861]
+--------------------------------------------------------------------------------------------------------
+  'earned gain'  = solved WITHOUT any answer leak (far-transfer proxy)
+  'leak-solves'  = solved only because an answer was leaked (cheap)
+  'never solved' = neither route succeeded within the turn budget
+[M2] calibration gates:
+    ok   G1: ALR at lambda=0 = 0.850 (heavy leakage)
+    ok   G2: ALR falls 0.850 -> 0.000 as lambda rises
+    ok   G3: learning gain peaks at 0.407 (not saturated)
+    ok   G4: boundary located at lambda=0.3 (gain=0.407)
+    ok   G5: crossing the boundary degrades gain (0.407 at boundary -> 0.142 at lambda=0.8)
+
+[M2] Proposition 1 diagnostic (a withholding BOUNDARY, not a smooth optimum):
+     ALR: max 0.8502 @lambda=0.0, min 0.0003 @lambda=0.8
+     P1 boundary located at lambda=0.3 (index 11 of 0..18): PASS
+     P2 rising side: gain 0.1113 -> 0.4074 (delta +0.2962, need >= 0.02): PASS
+     P3 falling side beyond the boundary: gain 0.4074 -> 0.1424 (delta +0.2650, need >= 0.02): PASS
+     P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0551, observed=+0.2962, scaffolding share=81% (need >= 50%): PASS
+     P4 CI separation vs lambda=0: PASS (opt low 0.4036 vs base high 0.1163) [recorded, non-binding]
+     P5 CI separation vs lambda_max: PASS (opt low 0.4036 vs max high 0.1464) [recorded, non-binding]
+     => SUPPORTED: a withholding boundary is located at lambda* under this model (Proposition 1). Report the boundary LOCATION as an interval; only its EXISTENCE and the attribution share are A9-stable.
+
+[M2] raw     -> data\m2_lambda_alr_raw.csv
+[M2] summary -> data\m2_lambda_alr_summary.json
+
+====================================================================================================
+[SELFTEST] mutation checks 鈥?each mutant must change the conclusion
+====================================================================================================
+ok   BASELINE (unmutated)                         theta= 0.04 peak=0.403@0.3   alr0=0.850 SUPPORTED           expect=SUPPORTED
+ok   M1 no durable attenuation (all 1.0)          theta= 0.05 peak=0.441@0.25  alr0=0.846 SUPPORTED           expect=SUPPORTED
+ok   M2 scaffolds give zero mastery gain          theta= 0.00 peak=0.090@0.25  alr0=0.911 REJECTED            expect=REJECTED
+FAIL M3 answer leaks DO teach (leak_durable=0.50) theta= 1.08 peak=0.451@0.25  alr0=0.847 SUPPORTED           expect=REJECTED
+ok   M4 easy solve threshold (0.20)               theta= 0.22 peak=0.454@0.25  alr0=0.850 SUPPORTED           expect=SUPPORTED
+ok   M5 no delivery damping (0.0)                 theta= 0.04 peak=0.456@0.6   alr0=0.851 REJECTED            expect=REJECTED
+ok   M6 no gate + no damping (lock-out disabled)  theta= 0.64 peak=0.745@0.8   alr0=0.853 REJECTED            expect=REJECTED
+ok   M7 no damping + no frustration               theta= 0.00 peak=0.611@0.6   alr0=0.875 REJECTED            expect=REJECTED
+ok   M8 collapse boundary beyond grid (no lock-out) theta= 0.04 peak=0.456@0.6   alr0=0.851 REJECTED          expect=REJECTED
+ok   M9 collapse boundary at the far left (crippled throughout) theta= 0.00 peak=0.178@0.25  alr0=0.864 REJECTED expect=REJECTED
+
+ok   LIVENESS durable_factor: mutating it CHANGES the reported gain (must change; a no-op mutation proves the parameter is dead)
+ok   LIVENESS collapse_threshold: mutating it CHANGES the reported gain (must change; a no-op mutation proves the parameter is dead)
+ok   LIVENESS collapse_sharpness: mutating it CHANGES the reported gain (must change; a no-op mutation proves the parameter is dead)
+
+[SELFTEST] 12/13 mutation checks passed
+[SELFTEST] FAILURES:
+           - M3 answer leaks DO teach (leak_durable=0.50)
+
+[SELFTEST] A mutant whose verdict does not match expectation
+           means the diagnostic is not measuring the mechanism
+           it claims to measure. Do NOT report Proposition 1.
+EXIT=1

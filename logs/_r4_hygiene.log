@@ -1,0 +1,18 @@
+file                                              KB   pg  font KB  share  fonts
+--------------------------------------------------------------------------------------------------------------
+ok   00_定位与口径_术语翻译表.pdf                              908    3      801   88%  ['Microsoft YaHei Regular']
+ok   01_theoretical_framework_en.pdf                 950    5      801   84%  ['Microsoft YaHei Regular']
+ok   02_系统架构与交互协议.pdf                                893    2      801   90%  ['Microsoft YaHei Regular']
+ok   03_408知识图谱骨架.pdf                                885    3      801   91%  ['Microsoft YaHei Regular']
+ok   04_题库方案与测量.pdf                                  875    3      801   92%  ['Microsoft YaHei Regular']
+ok   05_论文大纲_v2.pdf                                  896    4      801   89%  ['Microsoft YaHei Regular']
+ok   06_苏格拉底引导代表作精读与缺口分析.pdf                        1077    8      801   74%  ['Microsoft YaHei Regular']
+ok   07_Introduction动机链_原文证据锚定.pdf                  1352   14      801   59%  ['Microsoft YaHei Regular']
+ok   08_M2实验审计记录.pdf                                1252   11      801   64%  ['Microsoft YaHei Regular']
+ok   09_方向决策备忘.pdf                                  1296   12      801   62%  ['Microsoft YaHei Regular']
+ok   10_汇报_选题过程_微信版.pdf                              828    2      801   97%  ['Microsoft YaHei Regular']
+ok   11_论文成稿进度地图.pdf                                 907    3      801   88%  ['Microsoft YaHei Regular']
+ok   FEDC投稿_引导式多智能体_深度研究报告.pdf                      1024    8      801   78%  ['Microsoft YaHei Regular']
+ok   README.pdf                                      940    4      801   85%  ['Microsoft YaHei Regular']
+
+[pdf-hygiene] PASS: 14/14 PDFs clean (no fallback font embedded, no bloat)

@@ -1,0 +1,60 @@
+<svg viewBox="0 0 680 568" width="100%" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>引导式多智能体教学系统闭环架构</title>
+<desc>学生提问后依次经过问题分解、学情图记忆、引导生成、鲁棒协作、题库出题，学生作答后更新图记忆形成循环。</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<g>
+<rect x="160" y="40" width="360" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="62" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#0C447C">学生提问</text>
+</g>
+
+<g>
+<rect x="160" y="104" width="360" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="124" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#0C447C">问题分解智能体</text>
+<text x="340" y="142" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#185FA5">BayesG · 拆知识点链</text>
+</g>
+
+<g>
+<rect x="160" y="184" width="360" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="204" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#0C447C">学情图记忆智能体</text>
+<text x="340" y="222" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#185FA5">MRAgent · 定位卡点</text>
+</g>
+
+<g>
+<rect x="160" y="264" width="360" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
+<text x="340" y="284" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#3C3489">引导生成智能体（核心）</text>
+<text x="340" y="302" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#534AB7">MIR3 · 答案泄露闸门</text>
+</g>
+
+<g>
+<rect x="160" y="344" width="360" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="364" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#0C447C">鲁棒协作层</text>
+<text x="340" y="382" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#185FA5">WALL · 反要答案</text>
+</g>
+
+<g>
+<rect x="160" y="424" width="360" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="444" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#0C447C">题库智能体</text>
+<text x="340" y="462" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#185FA5">BayesG · 自适应出题</text>
+</g>
+
+<g>
+<rect x="160" y="504" width="360" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="526" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="14" font-weight="500" fill="#0C447C">学生作答</text>
+</g>
+
+<line x1="340" y1="84" x2="340" y2="102" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="160" x2="340" y2="182" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="240" x2="340" y2="262" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="320" x2="340" y2="342" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="400" x2="340" y2="422" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="340" y1="480" x2="340" y2="502" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<path d="M520 526 L600 526 L600 212 L522 212" fill="none" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="600" y="360" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#5F5E5A">更新图记忆</text>
+<text x="600" y="376" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" fill="#5F5E5A">循环</text>
+</svg>

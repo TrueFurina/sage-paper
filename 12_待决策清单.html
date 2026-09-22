@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="docx-page-size" content="A4">
+<title>SAGE 项目待决策清单</title>
+<style>
+@page { @bottom-center { content: counter(page); } }
+@page cover { @bottom-center { content: none; } }
+section[role="cover"] { page: cover; }
+
+:root {
+  /* Typography */
+  --fs-title: var(--typography-fontSize-title, 28pt);
+  --fs-cover-cat: var(--typography-fontSize-coverCategory, 14pt);
+  --fs-subtitle: var(--typography-fontSize-subtitle, 18pt);
+  --fs-h1: var(--typography-fontSize-h1, 20pt);
+  --fs-section: var(--typography-fontSize-sectionHeader, 13pt);
+  --fs-h2: var(--typography-fontSize-h2, 11pt);
+  --fs-body: var(--typography-fontSize-body, 9pt);
+  --fs-small: var(--typography-fontSize-small, 8pt);
+  --fs-tiny: var(--typography-fontSize-tiny, 7pt);
+  --ff-heading: var(--typography-fontFamily-heading, sans-serif);
+  --ff-body: var(--typography-fontFamily-body, sans-serif);
+  --ff-data: var(--typography-fontFamily-data, sans-serif);
+  --lh-body: var(--typography-lineHeight-body, 1.6);
+  --lh-heading: var(--typography-lineHeight-compact, 1.2);
+  --lh-title: var(--typography-lineHeight-title, 1.3);
+  --fw-bold: var(--typography-fontWeight-heading, 600);
+  --fw-emph: var(--typography-fontWeight-emphasis, 500);
+  --fw-normal: var(--typography-fontWeight-body, 400);
+  /* Color */
+  --color-primary: var(--color-primary, #1565C0);
+  --color-secondary: var(--color-secondary, #0288D1);
+  --color-accent: var(--color-accent, #00897B);
+  --color-heading: var(--color-heading, #1A237E);
+  --color-text: var(--color-text, #212121);
+  --color-muted: var(--color-textSecondary, #616161);
+  --color-border: var(--color-divider, #E0E0E0);
+  --color-bg: var(--color-background, #FFFFFF);
+  --color-surface: var(--color-surface, #F5F7FA);
+  --color-warning: var(--color-dataViz-series3, #F9A825);
+  --color-danger: var(--color-dataViz-series4, #E53935);
+  --color-success: var(--color-accent, #00897B);
+  --color-summary-bg: var(--color-surface, #F5F7FA);
+  --color-summary-border: var(--color-primary, #1565C0);
+  --summary-border-width: 4px;
+  --radius-card: var(--spacing-cardPadding, 8px);
+  --shadow-card: 0 1px 4px rgba(26, 35, 126, 0.10);
+  /* Spacing */
+  --spacing-paragraph: var(--spacing-paragraph, 0.75em);
+  --spacing-section: var(--spacing-sectionGap, 2.5em);
+  --spacing-block: var(--spacing-paragraphAfter, 0.75em);
+  --spacing-card: var(--spacing-cardPadding, 1.5em);
+  --spacing-indent: var(--spacing-indent, 0em);
+  --spacing-list-indent: var(--spacing-sectionGap, 2.5em);
+  --margin-page: var(--layout-marginTop, 2.5cm);
+  --page-content-width: var(--layout-maxContentWidth, 160mm);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  max-width: var(--page-content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--margin-page) 0;
+}
+
+/* ===== Cover ===== */
+section[role="cover"] {
+  background: var(--color-surface);
+  border-left: var(--summary-border-width) solid var(--color-primary);
+  padding: var(--spacing-section) var(--spacing-card);
+  margin-bottom: var(--spacing-section);
+}
+p.cover-category {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-cover-cat);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+  text-align: left;
+  margin-bottom: var(--spacing-block);
+}
+h1.cover-title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-title);
+  color: var(--color-heading);
+  text-align: left;
+  margin-bottom: var(--spacing-block);
+}
+p.cover-subtitle {
+  font-size: var(--fs-subtitle);
+  font-weight: var(--fw-normal);
+  color: var(--color-muted);
+  text-align: left;
+  margin-bottom: var(--spacing-section);
+}
+table.cover-meta { width: 100%; border-collapse: collapse; }
+table.cover-meta thead th {
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+  text-align: left;
+  padding: var(--spacing-paragraph) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+table.cover-meta td {
+  font-size: var(--fs-small);
+  padding: var(--spacing-paragraph) 0;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+table.cover-meta td:first-child { width: 28%; color: var(--color-muted); }
+
+/* ===== Headings ===== */
+h2, h3, h4 { font-family: var(--ff-heading); line-height: var(--lh-heading); }
+h2 {
+  font-size: var(--fs-section);
+  font-weight: var(--fw-bold);
+  color: var(--color-heading);
+  margin-top: var(--spacing-section);
+  margin-bottom: var(--spacing-paragraph);
+  padding-left: var(--spacing-block);
+  border-left: var(--summary-border-width) solid var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-paragraph);
+}
+.h2-num { color: var(--color-accent); }
+h3 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--color-heading);
+  margin-top: var(--spacing-card);
+  margin-bottom: var(--spacing-paragraph);
+  padding-left: var(--spacing-paragraph);
+  border-left: 3px solid var(--color-primary);
+}
+h4 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+  margin-top: var(--spacing-block);
+  margin-bottom: var(--spacing-paragraph);
+}
+p { margin-bottom: var(--spacing-paragraph); }
+ul, ol { padding-left: var(--spacing-list-indent); margin-bottom: var(--spacing-paragraph); }
+li { margin-bottom: var(--spacing-paragraph); }
+strong { font-weight: var(--fw-bold); color: var(--color-heading); }
+.data-emphasis { color: var(--color-danger); font-weight: var(--fw-bold); }
+
+/* ===== Tables ===== */
+table { border-collapse: collapse; width: 100%; margin-bottom: var(--spacing-card); }
+th, td {
+  padding: var(--spacing-paragraph) var(--spacing-block);
+  border: 1px solid var(--color-border);
+  font-size: var(--fs-small);
+  vertical-align: top;
+  text-align: left;
+}
+thead th {
+  background: var(--color-heading);
+  color: var(--color-bg);
+  font-weight: var(--fw-bold);
+  border-color: var(--color-heading);
+}
+tbody tr:nth-child(even) td { background: var(--color-surface); }
+caption {
+  font-size: var(--fs-tiny);
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-paragraph);
+  text-align: left;
+}
+td.code, th.code { font-family: var(--ff-data); color: var(--color-primary); font-weight: var(--fw-bold); white-space: nowrap; text-align: center; }
+
+/* ===== Executive summary ===== */
+.executive-summary {
+  margin: var(--spacing-section) 0;
+  padding: var(--spacing-card);
+  border-left: var(--summary-border-width) solid var(--color-summary-border);
+  background: var(--color-summary-bg);
+}
+.summary-header { margin-bottom: var(--spacing-block); }
+.summary-header h2 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: var(--fs-h1);
+  color: var(--color-primary);
+}
+.summary-badge {
+  display: block;
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+  font-style: italic;
+}
+.summary-highlights { display: flex; gap: var(--spacing-block); flex-wrap: wrap; margin-bottom: var(--spacing-card); }
+.summary-body { font-size: var(--fs-body); }
+
+/* ===== data-card ===== */
+[data-component="data-card"] {
+  display: inline-flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 120px;
+  padding: var(--spacing-block);
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border-top: 3px solid var(--color-primary);
+}
+[data-component="data-card"][data-color="danger"]  { border-top-color: var(--color-danger); }
+[data-component="data-card"][data-color="warning"] { border-top-color: var(--color-warning); }
+[data-component="data-card"][data-color="success"] { border-top-color: var(--color-success); }
+[data-component="data-card"]::before {
+  content: attr(data-title);
+  font-size: var(--fs-tiny);
+  color: var(--color-muted);
+  font-weight: var(--fw-normal);
+}
+.card-value { font-family: var(--ff-data); font-size: var(--fs-h1); font-weight: var(--fw-bold); color: var(--color-heading); line-height: var(--lh-heading); }
+.card-unit { font-size: var(--fs-tiny); color: var(--color-muted); }
+
+/* ===== callout ===== */
+[data-component="callout"] {
+  display: block;
+  padding: var(--spacing-block);
+  margin: var(--spacing-paragraph) 0 var(--spacing-card) 0;
+  border-left: var(--summary-border-width) solid var(--color-primary);
+  background: var(--color-surface);
+}
+[data-component="callout"][data-variant="warning"] { border-left-color: var(--color-warning); }
+[data-component="callout"][data-variant="danger"]  { border-left-color: var(--color-danger); }
+[data-component="callout"][data-variant="success"] { border-left-color: var(--color-success); }
+.callout-title { font-weight: var(--fw-bold); color: var(--color-heading); margin-bottom: var(--spacing-paragraph); }
+
+/* ===== chip ===== */
+p.chip {
+  display: inline-block;
+  padding: var(--spacing-paragraph) var(--spacing-block);
+  border-radius: var(--radius-card);
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+  color: var(--color-bg);
+  margin-bottom: 0;
+}
+p.chip-now     { background: var(--color-danger); }
+p.chip-due     { background: var(--color-warning); color: var(--color-heading); }
+p.chip-outside { background: var(--color-primary); }
+p.chip-self    { background: var(--color-muted); }
+p.chip-done    { background: var(--color-accent); }
+
+/* ===== TOC ===== */
+.doc-toc {
+  padding: var(--spacing-card);
+  background: var(--color-surface);
+  margin-bottom: var(--spacing-section);
+}
+.toc-title { font-weight: var(--fw-bold); color: var(--color-heading); margin-bottom: var(--spacing-block); }
+.toc-list, .toc-list ol, .toc-list ul { list-style: none; list-style-type: none; padding-left: var(--spacing-list-indent); }
+.toc-list li { margin-bottom: var(--spacing-paragraph); }
+.toc-list a { color: var(--color-primary); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<section role="cover">
+  <p class="cover-category">项目管理 · 决策登记册</p>
+  <h1 class="cover-title">SAGE 项目待决策清单</h1>
+  <p class="cover-subtitle">需人工拍板事项汇总 —— 供项目负责人与导师逐条裁决</p>
+  <table class="cover-meta">
+    <thead>
+      <tr><th>项</th><th>内容</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>项目</td><td>SAGE —— 反答案依赖的引导式多智能体教学系统</td></tr>
+      <tr><td>目标期刊</td><td>Frontiers of Education in China（FEDC）</td></tr>
+      <tr><td>文档性质</td><td>决策登记册（内部管理文档）</td></tr>
+      <tr><td>编号规则</td><td>延续 D 系列；D1–D8 已裁决，本册自 D9 起</td></tr>
+      <tr><td>源文件</td><td>12_待决策清单.md</td></tr>
+      <tr><td>生成日期</td><td>2026-09-20</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section role="body" data-page-restart="1">
+
+<nav class="doc-toc" aria-label="文档目录">
+  <p class="toc-title">目录</p>
+  <ol class="toc-list">
+    <li><a href="#section-1">一、决策速览</a></li>
+    <li><a href="#section-2">二、判定标准：什么算「需要人拍板」</a></li>
+    <li><a href="#section-3">三、A 类：阻塞下游，建议现在拍（D9–D13）</a></li>
+    <li><a href="#section-4">四、B 类：需要出面推进（D14–D18）</a></li>
+    <li><a href="#section-5">五、C 类：可自决，做完告知</a></li>
+    <li><a href="#section-6">六、D 类：已裁决（留档，防重复讨论）</a></li>
+    <li><a href="#section-7">七、E 类：开放，待后续补充</a></li>
+    <li><a href="#section-8">八、汇总</a></li>
+  </ol>
+</nav>
+
+<div class="executive-summary">
+  <div class="summary-header">
+    <h2>执行摘要</h2>
+    <span class="summary-badge">Executive Summary</span>
+  </div>
+  <div class="summary-highlights">
+    <div data-component="data-card" data-title="现在必须拍板" data-color="danger">
+      <span class="card-value">5</span>
+      <span class="card-unit">项　D9–D13</span>
+    </div>
+    <div data-component="data-card" data-title="有埋点时限" data-color="warning">
+      <span class="card-value">2</span>
+      <span class="card-unit">项　D10 / D11</span>
+    </div>
+    <div data-component="data-card" data-title="仅负责人可给" data-color="primary">
+      <span class="card-value">1</span>
+      <span class="card-unit">项　D12</span>
+    </div>
+    <div data-component="data-card" data-title="已裁决留档" data-color="success">
+      <span class="card-value">8</span>
+      <span class="card-unit">项　D1–D8</span>
+    </div>
+  </div>
+  <div class="summary-body">
+    <p>当前<strong>真正阻塞下游的只有 <span class="data-emphasis">5 件事</span>（D9–D13）</strong>。其余为「是否去获取外部资料」的动作项，以及作者可自行执行的收尾项。</p>
+    <p>其中 <strong>D12 只有项目负责人能给出</strong>；<strong>D10 / D11 有埋点时限</strong>（M3 实验开始前必须定）；<strong>D9 是所有下游图表的先决条件</strong>。</p>
+  </div>
+</div>
+
+
+<h2 id="section-1"><span class="h2-num">一、</span>决策速览</h2>
+
+<table>
+  <caption>表 1　需人工拍板事项速览</caption>
+  <thead>
+    <tr><th class="code">编号</th><th>事项</th><th>性质</th><th>时限</th><th>阻塞对象</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="code">D9</td><td>三级脚手架改为「接近度」阶梯</td><td>重标定</td><td><p class="chip chip-now">需先定</p></td><td>02 / 04 / 05 §4.2 / M2 复跑</td></tr>
+    <tr><td class="code">D10</td><td>「真不会 vs 要答案」意图判定</td><td>新增次要组件</td><td><p class="chip chip-due">M3 埋点前</p></td><td>04 测量口径 / M3 采集表</td></tr>
+    <tr><td class="code">D11</td><td>六维学生画像</td><td>新增</td><td><p class="chip chip-due">M3 埋点前</p></td><td>04 测量章节 / M3 采集表</td></tr>
+    <tr><td class="code">D12</td><td>M3 实验硬条件</td><td>外部资源</td><td><p class="chip chip-now">尽快</p></td><td>全部实验设计</td></tr>
+    <tr><td class="code">D13</td><td>四型画像作 M3 调节变量</td><td>方法学</td><td><p class="chip chip-due">M3 前测量表</p></td><td>M3 前测设计</td></tr>
+  </tbody>
+</table>
+
+<h2 id="section-2"><span class="h2-num">二、</span>判定标准：什么算「需要人拍板」</h2>
+
+<table>
+  <thead>
+    <tr><th>类型</th><th>判据</th><th>处置</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>A 阻塞型决策</strong></td><td>不定就无法开始下游工作，或定了会导致返工</td><td><p class="chip chip-now">D9–D13，建议现在拍</p></td></tr>
+    <tr><td><strong>B 外部动作</strong></td><td>需要人出面（联系作者、购买全文、跑外部流程），AI 无法代劳</td><td><p class="chip chip-outside">D14–D18</p></td></tr>
+    <tr><td><strong>C 可自决</strong></td><td>不涉及价值判断与外部资源，做了只需知情</td><td><p class="chip chip-self">见第五章</p></td></tr>
+    <tr><td><strong>D 已裁决</strong></td><td>已定，留档防重复讨论</td><td><p class="chip chip-done">见第六章</p></td></tr>
+  </tbody>
+</table>
+
+<h2 id="section-3"><span class="h2-num">三、</span>A 类：阻塞下游，建议现在拍（D9–D13）</h2>
+
+<p>下列 5 项不定则无法开始下游工作，或定了会导致返工，因此建议现在拍板。每项给出选项、代价、依据与建议。</p>
+
+<h3>（一）D9　三级脚手架：是否改为「接近度」阶梯</h3>
+
+<p><strong>现状冲突</strong>（真实内部不一致，非表述差异）：</p>
+
+<table>
+  <thead>
+    <tr><th></th><th>02 现有写法</th><th>拟改写法</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="code">L1</td><td>反诘（问下一步）</td><td><strong>解题方向</strong></td></tr>
+    <tr><td class="code">L2</td><td>局部提示（给一个关系式）</td><td>有方向但不知怎么做</td></tr>
+    <tr><td class="code">L3</td><td>知识点微讲（只讲前置知识点）</td><td>接近答案，<strong>但最后一步卡住</strong></td></tr>
+    <tr><td>阶梯维度</td><td><strong>模态</strong>（问 / 提示 / 微讲）</td><td><strong>接近度</strong>（离答案多近）</td></tr>
+    <tr><td>对「泄露量」是否单调</td><td>否</td><td><strong>是</strong></td></tr>
+  </tbody>
+</table>
+
+<div data-component="callout" data-variant="warning">
+  <p class="callout-title">为什么这不是审美问题</p>
+  <p>&nbsp;&nbsp;整套 A6 假设建立在「λ 越大 = 越克制」之上。若阶梯对泄露量不单调（微讲一个前置知识点，可能比「给一个子步骤」离答案更远），则该语义不成立，A6 失稳。</p>
+  <p>&nbsp;&nbsp;此外，拟改写法自带红线「<strong>最后一步永远留给学生</strong>」，它正是 earned-solve rate 的直接操作化，把主结局与核心机制缝合在一起。</p>
+</div>
+
+<table>
+  <thead>
+    <tr><th>选项</th><th>代价</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>① 改（推荐）</strong></td><td>一次<strong>口径重标定</strong>（同 M3 处置）：须<strong>扫出翻转点、两侧都断言</strong>；同步 02 §2 / 04 测量口径 / 05 §4.2 / m2_lambda_sweep.py 的 level_gate 语义；<strong>需重跑一次 M2</strong></td></tr>
+    <tr><td>② 不改，只补说明</td><td>零成本，但 A6 的单词语义继续失稳；被问「凭什么说 λ 越大越克制」时无答</td></tr>
+    <tr><td>③ 改，且模态降为同层级内的交付形式字段</td><td>同 ①，另需在 02 增加一个字段（收益：层级与交付形式解耦）</td></tr>
+  </tbody>
+</table>
+
+<div data-component="callout" data-variant="success">
+  <p>&nbsp;&nbsp;<strong>建议</strong>：① + ③ 合并（接近度为轴，模态为字段）。</p>
+  <p>&nbsp;&nbsp;<strong>阻塞</strong>：02 / 04 / 05 §4.2 / M2 复跑 / §4.2 那张图必须先定才能画。</p>
+</div>
+
+<h3>（二）D10　「真不会 vs 在要答案」的意图判定：是否立为次要组件</h3>
+
+<p><strong>一手证据（已核）</strong>：</p>
+
+<table>
+  <thead>
+    <tr><th>来源</th><th>结论</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Baker, Corbett &amp; Koedinger (2004), ITS 2004, LNCS 3220:531-540</td><td><strong>gaming the system</strong> / <strong>help abuse</strong> 已定义：<em>quickly and repeatedly asks for help until the tutor gives the student the correct answer, often before the student attempts the problem</em>；gamers 只学到 <strong>2/3</strong>；24 个日志特征</td></tr>
+    <tr><td>Baker, Mitrovic &amp; Mathews (2010), UMAP, LNCS 6075:267-278</td><td>SQL-Tutor：<em>rapidly repeating the same answer or blank answers to elicit complete answers</em></td></tr>
+    <tr><td>LAK 2026《Revisiting the Hint Button》(DOI 10.1145/3785022.3785040)</td><td><strong>10–40%</strong> 学生有 gaming 行为；机器学习检测器两大障碍 = <strong>需专家 + 泛化差</strong>；呼吁<strong>简单、可解释、跨队列验证</strong>的指标</td></tr>
+    <tr><td>Help Tutor（Aleven et al. 2016）<strong>（反面）</strong></td><td><strong>改善了求助行为，但没有提升学习成绩</strong> → 「检测并纠正 gaming」不等于「提高学习」，不得当卖点</td></tr>
+  </tbody>
+</table>
+
+<p><strong>结论</strong>：概念不是新的（2004 年起），只能作<strong>次要组件</strong>；空位在于「LLM 自由文本 + 简单可泛化特征」。</p>
+
+<table>
+  <thead>
+    <tr><th>选项</th><th>代价</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>① 立为描述性组件（推荐）</strong>：采集特征、报告分布、响应方式 = 降级子问题</td><td>需在 <strong>M3 埋点前</strong>定特征定义；不做「拒绝 / 指责」式干预，对误判鲁棒</td></tr>
+    <tr><td>② 立为干预组件（按意图改变响应策略）</td><td>有<strong>误伤风险</strong>（AMCIS 2026：过度守约对最弱学生伤害最大）；需额外对照臂，实验复杂度上升</td></tr>
+    <tr><td>③ 不立，只在 Limitations 提</td><td>最省，但丢掉一个真实且未被 LLM 场景解决的次要贡献</td></tr>
+  </tbody>
+</table>
+
+<div data-component="callout" data-variant="warning">
+  <p class="callout-title">时限与建议</p>
+  <p>&nbsp;&nbsp;<strong>时限</strong>：M3 埋点设计前必须定，否则真实课堂采不到、事后补不了。</p>
+  <p>&nbsp;&nbsp;<strong>建议</strong>：①。响应决策<strong>两个都不选</strong>（不吐答案、不说「意图不明」），改走<strong>降级子问题</strong>：真不会的学生得到台阶，来要答案的学生被要求动手，对误判鲁棒。</p>
+  <p>&nbsp;&nbsp;<strong>阻塞</strong>：04 测量口径 / M3 数据采集表 / 02 §3。</p>
+</div>
+
+<h3>（三）D11　六维学生画像：是否采纳</h3>
+
+<p><strong>标准</strong>：每一维必须<strong>可从交互日志直接算</strong>、<strong>不用自陈量表</strong>——因为 MA et al. (2026) 的自陈局限正是我们要攻击的点，自身不能犯同一问题。</p>
+
+<table>
+  <thead>
+    <tr><th class="code">序号</th><th>维度</th><th>计算方式</th><th>文献锚</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="code">1</td><td><strong>知识掌握</strong></td><td>每个知识点的 earned-solve rate</td><td>本项目主结局</td></tr>
+    <tr><td class="code">2</td><td><strong>先修完整度</strong></td><td>卡点的前置节点是否具备</td><td>知识图谱 DAG</td></tr>
+    <tr><td class="code">3</td><td><strong>求助质量</strong></td><td>求助前尝试次数、求助时点</td><td>Aleven &amp; Koedinger (2000)</td></tr>
+    <tr><td class="code">4</td><td><strong>守约压力</strong></td><td>Baker 特征 + 响应间隔</td><td>Baker et al. 2004 / LAK 2026</td></tr>
+    <tr><td class="code">5</td><td><strong>元认知校准</strong></td><td>自评置信 × 实答正确率</td><td>K-12 RCT 元认知缺口</td></tr>
+    <tr><td class="code">6</td><td><strong>持久性 vs 挫败</strong></td><td>尝试序列、放弃、间隔趋势</td><td>本项目 A8</td></tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr><th>选项</th><th>代价</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>① 采纳六维（推荐）</strong></td><td>需在 04 写清每维口径与算法；M3 采集表按此设计</td></tr>
+    <tr><td>② 减到四维（1 / 3 / 4 / 6）</td><td>更省，但元认知维度是差异化之一，砍掉可惜</td></tr>
+    <tr><td>③ 保留但只作附录</td><td>主文不清爽，审稿人看不到</td></tr>
+  </tbody>
+</table>
+
+<p><strong>建议</strong>：①。注意：「真不会 vs 要答案」= 第 4 维，不单列为主机制（与 D10 一致）。<br><strong>阻塞</strong>：04 测量章节 / M3 采集表。</p>
+
+<h3>（四）D12　M3 真实准实验的硬条件</h3>
+
+<div data-component="callout" data-variant="warning">
+  <p>&nbsp;&nbsp;<strong>这一条无法代决</strong>，全部涉及外部条件与资源。逐项需给结论。</p>
+</div>
+
+<table>
+  <thead>
+    <tr><th class="code">序号</th><th>事项</th><th>需要确认的信息</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="code">1</td><td><strong>伦理审查</strong></td><td>是否需要 IRB / 学院审批？周期多久？无审批则数据不可用</td></tr>
+    <tr><td class="code">2</td><td><strong>哪个课堂</strong></td><td>学校、课程名、班级数、学期起止</td></tr>
+    <tr><td class="code">3</td><td><strong>样本量</strong></td><td>可动员多少学生？决定统计功效，以及能否支撑亚组分析</td></tr>
+    <tr><td class="code">4</td><td><strong>分组与对照</strong></td><td>组间（SAGE / 传统 AI / 无 AI）还是组内？对照能否做到同等时间与内容</td></tr>
+    <tr><td class="code">5</td><td><strong>教师配合度</strong></td><td>是否有教师愿意配合固定课时与流程</td></tr>
+    <tr><td class="code">6</td><td><strong>数据采集范围</strong></td><td>对话日志 / 答题记录 / 自评 / 屏幕行为 / 延迟测——能采到哪些</td></tr>
+    <tr><td class="code">7</td><td><strong>实施周期</strong></td><td>单次课？一个单元？含延迟后测则至少跨 2 个时间点</td></tr>
+  </tbody>
+</table>
+
+<p><strong>为什么现在就要</strong>：D10 / D11 的特征定义必须按「真实采得到什么」来定；D13 的调节变量设计也取决于样本量。<br><strong>建议</strong>：先把 1 / 2 / 3 / 6 四项落实，其余可后置。</p>
+
+<h3>（五）D13　MA et al. (2026) 四型画像：是否用作 M3 调节变量</h3>
+
+<p><strong>背景</strong>：缺口第三条为「for whom」。MA et al. 的四型（谨慎体验型 42% / 劳动替代型 24% / 均衡探索型 21.2% / 深度使用型 12.8%）是现成的操作化。</p>
+
+<table>
+  <thead>
+    <tr><th>选项</th><th>代价</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>① 两维度作连续调节变量（推荐）</strong></td><td>需自编或改编量表并报信度；四型只作描述性报告</td></tr>
+    <tr><td>② 四格亚组分析</td><td><strong>样本量几乎必然撑不住</strong>（408 课堂通常一两个班），做出来不显著，反而自伤</td></tr>
+    <tr><td>③ 不做调节变量</td><td>丢掉「对谁有效」这一问，正中该缺口的空档</td></tr>
+  </tbody>
+</table>
+
+<p><strong>建议</strong>：①。不为追一个想法去承诺一个样本量撑不住的亚组分析。<br><strong>阻塞</strong>：M3 前测量表设计。</p>
+
+<h2 id="section-4"><span class="h2-num">四、</span>B 类：需要出面推进（D14–D18）</h2>
+
+<table>
+  <caption>表 2　需外部动作的事项</caption>
+  <thead>
+    <tr><th class="code">编号</th><th>事项</th><th>现状</th><th>为什么需要出面</th><th>影响</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="code">D14</td><td><strong>Suvernev et al. (2026) 全文 / 开源模型仓库</strong></td><td>全文未取得（IATED 付费墙），仅有官方摘要</td><td>可查的只有公开元数据；建议优先查其开源模型仓库的训练代码——<strong>代码证据强于论文文本</strong></td><td>贡献①措辞必须带「据其已公开摘要所述」限定语；取得后可放开</td></tr>
+    <tr><td class="code">D15</td><td><strong>Udeshi et al. (2026, Khan Academy) 原文</strong></td><td>目前来自 AIED 现场纪要转述</td><td>需取得会议报告原文核对措辞与数字</td><td>取得前只能写 as reported at AIED 2026；这是证据链第 4 环</td></tr>
+    <tr><td class="code">D16</td><td><strong>Brender 转引的 EEG 研究原始出处</strong></td><td>转引</td><td>需回溯原文</td><td>不能二次引用；审稿人会查</td></tr>
+    <tr><td class="code">D17</td><td><strong>Thonge &amp; Thakkar (2026) 全文</strong></td><td>未取得</td><td>核对 questioning intensity 是否为连续参数</td><td>贡献②差异化表述。注意：与 Sunil &amp; Thakkar 同组，可一并联系</td></tr>
+    <tr><td class="code">D18</td><td><strong>AMCIS 2026 TREO 引用形态</strong></td><td>不确定是 TREO 短文还是正式论文</td><td>确认最终出版形态</td><td>「Socratic Gap」p=.045 是 A9 的旁证，引用形态错会被挑</td></tr>
+  </tbody>
+</table>
+
+<h2 id="section-5"><span class="h2-num">五、</span>C 类：可自决，做完告知</h2>
+
+<table>
+  <thead>
+    <tr><th>事项</th><th>拟执行方式</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>模拟学生反证同步进 08 Limitations</td><td>与 04 / 01 口径一致</td></tr>
+    <tr><td>07 补 FEDC 已发 4 篇引用位置</td><td>HUANG / WANG / MA / SUN，补 DOI 与页码</td></tr>
+    <tr><td>提交前 --seeds 100 复核 λ*</td><td>复跑并替换区间数字</td></tr>
+    <tr><td>05 §4.2 图加层级上限台阶</td><td>λ*=0.30 与 cap 阈值数值相同，必须同图区分</td></tr>
+    <tr><td>根目录被占用的 PDF</td><td>待阅读器关闭后删除（副本已在 refs/）</td></tr>
+    <tr><td>logs/ 保留策略</td><td>建议保留最近 10 个 + 所有交付门禁日志</td></tr>
+    <tr><td>08 各节与新口径对齐复查</td><td>阈值形式改写后通检旧表述</td></tr>
+  </tbody>
+</table>
+
+<h2 id="section-6"><span class="h2-num">六、</span>D 类：已裁决（留档，防重复讨论）</h2>
+
+<table>
+  <thead>
+    <tr><th class="code">编号</th><th>结论</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="code">D1–D4</td><td>反答案依赖主轴 / 真实准实验 / 计算机 408 / 命名 SAGE</td></tr>
+    <tr><td class="code">D5</td><td><strong>重瞄</strong>（不换向）：第一宣称 = <strong>归因测量装置</strong></td></tr>
+    <tr><td class="code">D6</td><td>A9 改<strong>阈值 / 边界模型</strong>；λ* 语义 = <strong>守约边界下沿</strong></td></tr>
+    <tr><td class="code">D7</td><td>诊断 / KT <strong>降为次要章节</strong></td></tr>
+    <tr><td class="code">D8</td><td><strong>题名定稿</strong>（★ 2026-09-21 替换，用户已批准）：<em>When Does Guidance Still Help? Separating Scaffolding Effects from Answer-Leakage Effects in Graduate Cryptography Instruction — A Simulation Study</em><br><span style="color:#8a6d3b">旧题名（"…Evidence from a Computer Science (408) Classroom"）承诺了一个不存在的课堂研究 → 属虚假宣称，已作废。</span></td></tr>
+  </tbody>
+</table>
+
+<h2 id="section-7"><span class="h2-num">七、</span>E 类：开放，待后续补充</h2>
+
+<ul>
+  <li>是否引入<strong>新模型 / 新组件</strong>来实现既有要点</li>
+  <li>投稿<strong>时间目标</strong>（无 deadline 无法排期）</li>
+  <li>中译英策略（谁翻 / 工具 / AI 初翻 + 人工校）</li>
+</ul>
+
+<h2 id="section-8"><span class="h2-num">八、</span>汇总</h2>
+
+<div data-component="callout" data-variant="info">
+  <p>&nbsp;&nbsp;<strong>现在卡的只有 <span class="data-emphasis">5 件事</span></strong>（D9–D13）：其中 <strong>D12 只有项目负责人能给出</strong>；<strong>D10 / D11 有埋点时限</strong>；<strong>D9 是所有下游图表的先决条件</strong>。其余（D14–D18）是「是否去获取外部资料」的动作项；第五章那批可自行执行。</p>
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 680 442" width="100%" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>展示层与测量层的分离结构</title>
+<desc>展示层含三个可自选视图（能力画像、科目掌握图、诊断卡）；测量层为四维加一个条件维，效标是 earned-solve rate。两层不可互相污染。</desc>
+
+<text x="40" y="28" font-family="var(--font-sans)" font-size="15" font-weight="500" fill="#2C2C2A">展示层与测量层必须分开</text>
+<text x="40" y="50" font-family="var(--font-sans)" font-size="12" font-weight="400" fill="#5F5E5A">结构对应 xLM 五层模型（Van Labeke et al., 2007, IJAIED）：领域层是强制基础层，能力层叠在其上</text>
+
+<rect x="40" y="68" width="600" height="140" rx="12" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="64" y="92" font-family="var(--font-sans)" font-size="13" font-weight="500" fill="#0C447C">展示层 · 给学生看（视图自选，默认概览）</text>
+
+<rect x="64" y="104" width="176" height="84" rx="8" fill="#FFFFFF" stroke="#185FA5" stroke-width="0.5"/>
+<text x="152" y="126" font-family="var(--font-sans)" font-size="13" font-weight="500" fill="#0C447C" text-anchor="middle" dominant-baseline="central">能力画像</text>
+<text x="152" y="148" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">四维，跨科目</text>
+<text x="152" y="168" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">＝ xLM 能力层</text>
+
+<rect x="252" y="104" width="176" height="84" rx="8" fill="#FFFFFF" stroke="#185FA5" stroke-width="0.5"/>
+<text x="340" y="126" font-family="var(--font-sans)" font-size="13" font-weight="500" fill="#0C447C" text-anchor="middle" dominant-baseline="central">科目掌握图</text>
+<text x="340" y="148" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">408 四科 × 章节</text>
+<text x="340" y="168" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">＝ xLM 领域层</text>
+
+<rect x="440" y="104" width="176" height="84" rx="8" fill="#FFFFFF" stroke="#185FA5" stroke-width="0.5"/>
+<text x="528" y="126" font-family="var(--font-sans)" font-size="13" font-weight="500" fill="#0C447C" text-anchor="middle" dominant-baseline="central">诊断卡（实时反馈）</text>
+<text x="528" y="148" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">错题 → 卡点知识点</text>
+<text x="528" y="168" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">＝ xLM 错误层</text>
+
+<path d="M40 228 L640 228" fill="none" stroke="#888780" stroke-width="0.5" stroke-dasharray="4 4"/>
+<text x="40" y="248" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#A32D2D">↑ 界面可以做得很丰富；但下面这些量不得回流进测量模型 ↓</text>
+
+<rect x="40" y="266" width="600" height="106" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="64" y="290" font-family="var(--font-sans)" font-size="13" font-weight="500" fill="#085041">测量层 · 进论文与统计（D11 定稿）</text>
+<text x="64" y="316" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#0F6E56">四维：概念清晰度（提示依赖度）· 知识连接度 · 求助质量（滥用／回避两亚指标）· 抗挫坚持力</text>
+<text x="64" y="338" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#0F6E56">条件维：过程推演力（挂 D12 题型）　　砍：元认知校准 · 建模转化力</text>
+<text x="64" y="360" font-family="var(--font-sans)" font-size="11" font-weight="500" fill="#085041">效标（不是维度）：earned-solve rate ＝ 界面上的「科目掌握度」</text>
+
+<text x="40" y="396" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#5F5E5A">纪律一：视图由学生自选、默认给概览（Mabbott &amp; Bull, 2004；Al-Shanfari et al., 2019）。</text>
+<text x="40" y="418" font-family="var(--font-sans)" font-size="11" font-weight="400" fill="#5F5E5A">纪律二：界面不显示置信区间／不确定性（Demmans Epp et al., 2026, n=1,653：加入后理解表现反而下降）。</text>
+</svg>

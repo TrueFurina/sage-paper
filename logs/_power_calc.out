@@ -1,0 +1,39 @@
+==============================================================================
+M3 POWER ANALYSIS -- required N PER GROUP
+alpha = 0.05 two-sided, power = 0.80
+Effect sizes are EXTERNAL (literature), never from our own simulator.
+==============================================================================
+
+     d | source / reading                   |   t-test |   ANCOVA
+       |                                    |  per grp |   rho=.5
+------------------------------------------------------------------------------
+  0.30 | small; a short, low-dose intervention |      175 |      132
+  0.40 | small-to-moderate                  |       99 |       75
+  0.50 | Brender et al. 2026 contrast (d = 0.50) |       63 |       48
+  0.60 | optimistic                         |       44 |       33
+------------------------------------------------------------------------------
+
+THREE-ARM DESIGN (SAGE / answer-giving single agent / conventional self-study)
+Total N at the reference effect size d = 0.50:
+    per group (ANCOVA, rho=.5) = 48   -> total = 144
+
+MINIMUM VIABLE variant -- the version that can still answer RQ1 only
+(the attributable-share decomposition; it is a within-condition
+ decomposition rather than a between-condition contrast, so it does
+ NOT require detecting a group difference):
+    one arm, pre-specified in `15` section 6.2
+    still bounded below by the same pitfall: too few observations makes
+    the criterion credit scaffolding for leak-suppression effects.
+
+HONEST CAVEAT (must travel with every use of these numbers):
+  * The normal approximation is optimistic for very small N; treat the
+    small-d rows as indicative, not exact.
+  * rho = 0.5 is conservative. A stronger pre-test correlation lowers N;
+    a weaker one raises it above these figures.
+  * Clustering matters: observations from one student are NOT independent.
+    With ~20 problems per student, effective N is closer to the number of
+    STUDENTS than to the number of observations. These figures are per-student.
+  * Attrition and non-compliance require inflating the recruitment target
+    above the analysable N (a common rule of thumb is +20%).
+
+EXIT=0

@@ -1,0 +1,38 @@
+leak_durable_sensitivity.json                        {"keys": 2, "cfg": {"seeds": 8, "learners": 240, "problems": 8, "values": "0.012,0.30,0.50"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 3}
+
+leak_durable_sensitivity_0.012.json                  {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.012", "tag": "0.012"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.05.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.05", "tag": "0.05"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.10.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.10", "tag": "0.10"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.20.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.20", "tag": "0.20"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.22.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.22", "tag": "0.22"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.25.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.25", "tag": "0.25"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.28.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.28", "tag": "0.28"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.30.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.30", "tag": "0.30"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.40.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.40", "tag": "0.40"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.45.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.45", "tag": "0.45"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.50.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.50", "tag": "0.50"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.60.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.60", "tag": "0.60"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+leak_durable_sensitivity_0.70.json                   {"keys": 2, "cfg": {"seeds": 40, "learners": 240, "problems": 25, "values": "0.70", "tag": "0.70"}, "res0_keys": ["attributable_share", "control_left_effect", "gain_star", "lambda_star", "leak_durable", "left_effect", "notes", "right_effect", "theta", "verdict"], "n_res": 1}
+
+m2_a9_sensitivity.json                               {"keys": 9, "seeds": 30, "learners": 240, "problems": 20}
+
+m2_a9_sensitivity_v2.json                            {"keys": 6, "seeds": 20, "learners": 200, "problems": 15}
+
+m2_durable_factor_sensitivity.json                   {"keys": 6, "seeds": 20, "learners": 200, "problems": 15, "contrast_grid": [0.0, 0.5, 1.0, 1.25, 1.5, 2.0], "res0_keys": ["contrast", "durable_factor", "gain_0", "gain_max", "gain_star", "lambda_star", "left_effect", "right_effect", "share", "supported", "theta"], "n_res": 6}
+
+m2_lambda_alr_summary.json                           {"keys": 10, "seeds": 16, "learners": 240, "problems_per_learner": 16, "theta": 0.1790942863544842, "optimum_lambda_by_gain": 0.3}
+
+m2_lambda_alr_summary_SEEDS16_BACKUP_20260921.json   {"keys": 10, "seeds": 16, "learners": 240, "problems_per_learner": 16, "theta": 0.1790942863544842, "optimum_lambda_by_gain": 0.3}
+

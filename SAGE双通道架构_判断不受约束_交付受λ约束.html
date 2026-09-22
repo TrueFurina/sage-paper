@@ -1,0 +1,42 @@
+<svg viewBox="0 0 680 364" width="100%" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>SAGE 的双通道架构：判断通道不受约束，交付通道受 λ 约束</title>
+<desc>判断通道（问题分解、学情诊断、意图判定）不生成答案，因此不受脚手架约束影响，其精度不随 λ 变化；交付通道（引导生成）受 λ 约束，只限制接近度上限，红线是永不越过最后一步。λ 的运行点应落在守约边界 λ*=0.30 以内，越过崩塌阈值 λc=0.40 之后交付只是锁死学生，买不到任何东西。</desc>
+
+<text x="40" y="26" fill="#2C2C2A" font-family="system-ui, sans-serif" font-size="14" font-weight="500">约束只作用在交付通道 —— 判断精度不随 λ 变化</text>
+
+<g>
+<rect x="40" y="46" width="600" height="84" rx="10" fill="#E6F1FB" stroke="#378ADD" stroke-width="0.5"/>
+<text x="56" y="68" fill="#0C447C" font-family="system-ui, sans-serif" font-size="13" font-weight="500" dominant-baseline="central">判断通道 · 不受约束</text>
+<text x="56" y="90" fill="#185FA5" font-family="system-ui, sans-serif" font-size="12" dominant-baseline="central">A1 问题分解　A2 学情诊断　A4 意图判定</text>
+<text x="56" y="110" fill="#185FA5" font-family="system-ui, sans-serif" font-size="12" dominant-baseline="central">输出：卡点 k* + 意图标签（真不会 / 在要答案）　不生成答案</text>
+</g>
+
+<path d="M340 132 L340 156" fill="none" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<g>
+<rect x="40" y="160" width="600" height="84" rx="10" fill="#FAECE7" stroke="#D85A30" stroke-width="0.5"/>
+<text x="56" y="182" fill="#712B13" font-family="system-ui, sans-serif" font-size="13" font-weight="500" dominant-baseline="central">交付通道 · 受 λ 约束</text>
+<text x="56" y="204" fill="#993C1D" font-family="system-ui, sans-serif" font-size="12" dominant-baseline="central">A3 引导生成：λ = 允许的接近度上限（方向 / 方法 / 除末步外）</text>
+<text x="56" y="224" fill="#993C1D" font-family="system-ui, sans-serif" font-size="12" dominant-baseline="central">红线：永不越过最后一步 —— 最后一步永远是学生的</text>
+</g>
+
+<text x="40" y="270" fill="#2C2C2A" font-family="system-ui, sans-serif" font-size="13" font-weight="500">λ 脚手架强度：运行点取在边界以内，不取在边界之外</text>
+
+<rect x="60" y="284" width="280" height="14" rx="3" fill="#F1EFE8" stroke="#888780" stroke-width="0.5"/>
+<rect x="340" y="284" width="280" height="14" rx="3" fill="#FCEBEB" stroke="#E24B4A" stroke-width="0.5"/>
+<path d="M340 274 L340 302" fill="none" stroke="#2C2C2A" stroke-width="0.5" stroke-dasharray="3 3"/>
+<circle cx="270" cy="291" r="5" fill="#2C2C2A"/>
+
+<text x="100" y="291" fill="#5F5E5A" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dominant-baseline="central">可教区间</text>
+<text x="480" y="291" fill="#A32D2D" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dominant-baseline="central">越界：交付锁死，买不到任何东西</text>
+
+<text x="60" y="318" fill="#888780" font-family="system-ui, sans-serif" font-size="12" dominant-baseline="central">0</text>
+<text x="270" y="318" fill="#2C2C2A" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle" dominant-baseline="central">λ* = 0.30　运行点</text>
+<text x="380" y="318" fill="#A32D2D" font-family="system-ui, sans-serif" font-size="12" dominant-baseline="central">崩塌阈值 λc = 0.40</text>
+<text x="620" y="318" fill="#888780" font-family="system-ui, sans-serif" font-size="12" text-anchor="end" dominant-baseline="central">0.80</text>
+</svg>

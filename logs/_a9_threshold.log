@@ -1,0 +1,42 @@
+========================================================================================================
+[A9] sensitivity of lambda* to the three unverified A9 constants
+[A9] seeds=20 learners=200 problems=15 bootstrap=200
+========================================================================================================
+
+### threshold  (field `collapse_threshold`, reference 0.4)
+  value |  theta |   lam* |       boot lam* |   gain* |     left |    right |  attr | verdict
+--------------------------------------------------------------------------------------------------------
+  0.200 |  0.135 |   0.20 |    0.20+-0.01  |  0.3390 |  +0.2189 |  +0.1476 |  76% | SUPPORTED
+  0.250 |  0.143 |   0.20 |    0.20+-0.00  |  0.3997 |  +0.2797 |  +0.2082 |  81% | SUPPORTED
+  0.300 |  0.135 |   0.25 |    0.25+-0.00  |  0.4446 |  +0.3245 |  +0.2530 |  84% | SUPPORTED
+  0.400 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED
+  0.500 |  0.148 |   0.35 |    0.37+-0.02  |  0.5191 |  +0.3999 |  +0.3252 |  87% | SUPPORTED
+  0.600 |  0.148 |   0.45 |    0.44+-0.02  |  0.5365 |  +0.4173 |  +0.3390 |  87% | SUPPORTED
+  5.000 |  0.148 |   0.60 |    0.64+-0.07  |  0.5449 |  +0.4257 |  +0.0029 |  88% | REJECTED  (structural: excluded from spread)
+  equivariance — shifted (lambda - lc constant):
+  value |  lam* (grid) |           lam* shifted |   gain* |    right |  attr | verdict
+--------------------------------------------------------------------------------------------------------
+  0.200 |         0.20 |                 0.4000 |  0.3390 |  +0.1424 |  73% | SUPPORTED
+  0.250 |         0.20 |                 0.3500 |  0.3997 |  +0.2088 |  77% | SUPPORTED
+  0.300 |         0.25 |                 0.3500 |  0.4446 |  +0.2516 |  80% | SUPPORTED
+  0.400 |         0.30 |                 0.3000 |  0.4957 |  +0.3040 |  86% | SUPPORTED
+  0.500 |         0.35 |                 0.2500 |  0.5191 |  +0.3256 |  97% | SUPPORTED
+  0.600 |         0.45 |                 0.2500 |  0.5365 |  +0.3438 |  93% | SUPPORTED
+  -> lambda* over non-structural values: [0.2, 0.2, 0.25, 0.3, 0.35, 0.45]
+  -> spread, grid units       = 0.25
+  -> spread, invariant units  = 0.15
+  -> SUPPORTED for 6/6 non-structural values
+  -> attribution share range  = 76% – 88%
+
+========================================================================================================
+OVERALL
+========================================================================================================
+  threshold  lambda* spread 0.25 over 6 values | SUPPORTED 6/6 | attribution 76%-88%
+
+  Reading: the EXISTENCE of the boundary and the ATTRIBUTION SHARE
+  should be stable across every A9 value. The LOCATION of lambda* is
+  expected to move and must be reported as an interval, not a point.
+
+[A9] json -> .\m2_a9_sensitivity_v2.json
+[A9] csv  -> .\m2_a9_sensitivity_v2.csv
+A9_EXIT=0

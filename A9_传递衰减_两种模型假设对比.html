@@ -1,0 +1,47 @@
+<svg viewBox="0 0 680 430" width="100%" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>A9 传递衰减的两种模型假设对比</title>
+<desc>左：SAGE 当前假设的连续线性衰减；右：实证文献支持的阶跃式策略崩塌。两者对最优点的含义不同。</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<text class="th" x="40" y="30" dominant-baseline="central" fill="#26215C">当前 SAGE 模型（A9）：连续线性衰减</text>
+<line x1="60" y1="200" x2="300" y2="200" stroke="#888780" stroke-width="0.5"/>
+<line x1="60" y1="200" x2="60" y2="60" stroke="#888780" stroke-width="0.5"/>
+<text class="ts" x="60" y="218" text-anchor="middle" fill="#5F5E5A">0</text>
+<text class="ts" x="300" y="218" text-anchor="middle" fill="#5F5E5A">1.0</text>
+<text class="ts" x="180" y="236" text-anchor="middle" fill="#5F5E5A">lambda（限制强度）</text>
+<text class="ts" x="44" y="130" text-anchor="middle" fill="#5F5E5A" transform="rotate(-90 44 130)">传递出去的量</text>
+<line x1="60" y1="72" x2="300" y2="184" stroke="#534AB7" stroke-width="2"/>
+<circle cx="60" cy="72" r="3.5" fill="#534AB7"/>
+<circle cx="300" cy="184" r="3.5" fill="#534AB7"/>
+<text class="ts" x="180" y="112" text-anchor="middle" fill="#3C3489">线性、可微、处处有梯度</text>
+
+<text class="th" x="380" y="30" dominant-baseline="central" fill="#712B13">实证文献（2604.13006）：阶跃崩塌</text>
+<line x1="400" y1="200" x2="640" y2="200" stroke="#888780" stroke-width="0.5"/>
+<line x1="400" y1="200" x2="400" y2="60" stroke="#888780" stroke-width="0.5"/>
+<text class="ts" x="400" y="218" text-anchor="middle" fill="#5F5E5A">0</text>
+<text class="ts" x="640" y="218" text-anchor="middle" fill="#5F5E5A">1.0</text>
+<text class="ts" x="520" y="236" text-anchor="middle" fill="#5F5E5A">lambda（限制强度）</text>
+<text class="ts" x="384" y="130" text-anchor="middle" fill="#5F5E5A" transform="rotate(-90 384 130)">传递出去的量</text>
+<path d="M400 72 L505 76 L512 182 L640 184" fill="none" stroke="#D85A30" stroke-width="2"/>
+<circle cx="400" cy="72" r="3.5" fill="#D85A30"/>
+<circle cx="512" cy="182" r="3.5" fill="#D85A30"/>
+<line x1="508" y1="66" x2="508" y2="196" stroke="#E24B4A" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text class="ts" x="508" y="58" text-anchor="middle" fill="#A32D2D">阈值</text>
+<text class="ts" x="556" y="112" text-anchor="middle" fill="#712B13">3.5% 后骤降 → 平坦</text>
+<text class="ts" x="446" y="164" text-anchor="middle" fill="#993C1D">前 1-3 token</text>
+<text class="ts" x="446" y="178" text-anchor="middle" fill="#993C1D">即切换策略</text>
+
+<rect x="40" y="262" width="600" height="66" rx="12" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text class="th" x="60" y="282" dominant-baseline="central" fill="#633806">后果：如果真实机制是右图，则“内部最优”不是曲线的峰，而是阈值的位置</text>
+<text class="ts" x="60" y="302" dominant-baseline="central" fill="#854F0B">约束强度增加不会让脚手架“渐进变差”——一旦越过阈值，它从“有用”直接跳到“基本无用”。</text>
+<text class="ts" x="60" y="318" dominant-baseline="central" fill="#854F0B">那么 lambda* 测到的不是最优引导强度，而是“崩塌前的最后一个可用档位”。</text>
+
+<rect x="40" y="344" width="600" height="66" rx="12" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text class="th" x="60" y="364" dominant-baseline="central" fill="#2C2C2A">这不是伪证，但它改变了论文该说的话</text>
+<text class="ts" x="60" y="384" dominant-baseline="central" fill="#444441">曲线仍然可测、可绘——但解释从“存在一个最优强度”改为“存在一个崩塌阈值，最优即其下沿”。</text>
+<text class="ts" x="60" y="400" dominant-baseline="central" fill="#444441">后者反而更可操作：守约系统要防的不是“强度过高”，而是“越过某条线”。</text>
+</svg>

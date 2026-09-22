@@ -1,0 +1,39 @@
+============================================================================================================
+[A9] delivery_damping sensitivity — does the interior optimum survive?
+[A9] seeds=30 learners=240 problems=20 bootstrap=300
+============================================================================================================
+
+PART 1 — raw grid (default lambda grid, unchanged)
+     D |  theta |   lam* |        boot lam* |   gain* |    left |   right |   attr | verdict
+------------------------------------------------------------------------------------------------------------
+  0.00 |  0.249 |   0.70 |    0.70+-0.07   |  0.5900 | +0.4656 | +0.0006 |   88% | REJECTED
+  0.25 |  0.249 |   0.45 |    0.45+-0.03   |  0.5499 | +0.4255 | +0.0200 |   87% | SUPPORTED
+  0.50 |  0.249 |   0.40 |    0.39+-0.02   |  0.5156 | +0.3912 | +0.0659 |   85% | SUPPORTED
+  0.75 |  0.249 |   0.35 |    0.34+-0.02   |  0.4846 | +0.3602 | +0.1427 |   84% | SUPPORTED
+  1.00 |  0.249 |   0.30 |    0.28+-0.02   |  0.4570 | +0.3326 | +0.2715 |   83% | SUPPORTED
+  1.25 |  0.249 |   0.25 |    0.25+-0.00   |  0.4370 | +0.3126 | +0.4077 |   82% | SUPPORTED
+  1.50 |  0.249 |   0.25 |    0.25+-0.00   |  0.4158 | +0.2914 | +0.4061 |   80% | SUPPORTED
+
+PART 2 — ERGODICITY CHECK: grid rescaled so D*lambda is constant (same delivery schedule)
+     D | lam* (raw units) |  lam* (D*lam units) |   gain* |   right |   attr | verdict
+------------------------------------------------------------------------------------------------------------
+  0.25 |             0.45 |                0.15 |  0.5499 | +0.0387 |   88% | SUPPORTED
+  0.50 |             0.38 |                0.25 |  0.5177 | +0.1168 |   88% | SUPPORTED
+  0.75 |             0.35 |                0.35 |  0.4846 | +0.1427 |   84% | SUPPORTED
+  1.00 |             0.26 |                0.35 |  0.4644 | +0.1215 |   81% | SUPPORTED
+  1.25 |             0.27 |                0.45 |  0.4412 | +0.1007 |   84% | SUPPORTED
+  1.50 |             0.25 |                0.50 |  0.4158 | +0.0820 |   80% | SUPPORTED
+
+============================================================================================================
+SUMMARY
+============================================================================================================
+  lambda* across D in [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5]: 0.70, 0.45, 0.40, 0.35, 0.30, 0.25, 0.25
+  spread = 0.45 (min 0.25, max 0.70)
+  Proposition 1 SUPPORTED for 6/7 values of D
+  => Proposition 1 FAILS at D in [0.0]. The optimum is A9-conditional at those values.
+  rescaled lambda* spread = 0.35 vs raw spread = 0.45
+  => part of the movement is a UNIT ARTEFACT: in delivery-schedule units the optimum is more stable.
+
+[A9] json -> .\m2_a9_sensitivity.json
+[A9] csv  -> .\m2_a9_sensitivity.csv
+EXIT=0

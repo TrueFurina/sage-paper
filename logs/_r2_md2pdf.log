@@ -1,0 +1,35 @@
+[subset] shipped subset does not cover all sources -> rebuilding
+[subset] source=msyh.ttc chars=1381 -> target=_sage_subset.ttf
+MERG NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+[subset] CJK subset -> 790 KB
+[subset] coverage OK: every rendered char is in the subset (no fallback font will be embedded)
+[subset] wrote E:\Program\MARL\SAGE\_sage_subset.ttf (790 KB, from 18.8 MB)
+
+[*] FEDC投稿_引导式多智能体_深度研究报告.md  (15142 chars)
+    -> E:\Program\MARL\SAGE\pdf\FEDC投稿_引导式多智能体_深度研究报告.pdf  (1013 KB, engine=pymupdf)
+[*] README.md  (6061 chars)
+    -> E:\Program\MARL\SAGE\pdf\README.pdf  (928 KB, engine=pymupdf)
+[*] 00_定位与口径_术语翻译表.md  (4573 chars)
+    -> E:\Program\MARL\SAGE\pdf\00_定位与口径_术语翻译表.pdf  (897 KB, engine=pymupdf)
+[*] 01_theoretical_framework_en.md  (14899 chars)
+    -> E:\Program\MARL\SAGE\pdf\01_theoretical_framework_en.pdf  (939 KB, engine=pymupdf)
+[*] 02_系统架构与交互协议.md  (2579 chars)
+    -> E:\Program\MARL\SAGE\pdf\02_系统架构与交互协议.pdf  (881 KB, engine=pymupdf)
+[*] 03_408知识图谱骨架.md  (2474 chars)
+    -> E:\Program\MARL\SAGE\pdf\03_408知识图谱骨架.pdf  (873 KB, engine=pymupdf)
+[*] 04_题库方案与测量.md  (3298 chars)
+    -> E:\Program\MARL\SAGE\pdf\04_题库方案与测量.pdf  (863 KB, engine=pymupdf)
+[*] 05_论文大纲_v2.md  (5365 chars)
+    -> E:\Program\MARL\SAGE\pdf\05_论文大纲_v2.pdf  (884 KB, engine=pymupdf)
+[*] 06_苏格拉底引导代表作精读与缺口分析.md  (14079 chars)
+    -> E:\Program\MARL\SAGE\pdf\06_苏格拉底引导代表作精读与缺口分析.pdf  (1065 KB, engine=pymupdf)
+[*] 07_Introduction动机链_原文证据锚定.md  (36690 chars)
+    -> E:\Program\MARL\SAGE\pdf\07_Introduction动机链_原文证据锚定.pdf  (1340 KB, engine=pymupdf)
+[*] 08_M2实验审计记录.md  (18104 chars)
+    -> E:\Program\MARL\SAGE\pdf\08_M2实验审计记录.pdf  (1240 KB, engine=pymupdf)
+[*] 09_方向决策备忘.md  (19579 chars)
+    -> E:\Program\MARL\SAGE\pdf\09_方向决策备忘.pdf  (1285 KB, engine=pymupdf)
+
+[done] 12 ok, 0 failed
+  output dir: E:\Program\MARL\SAGE\pdf

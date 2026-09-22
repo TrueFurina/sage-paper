@@ -1,0 +1,21 @@
+MERG NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+[subset] shipped subset does not cover all sources -> rebuilding
+[subset] source=msyh.ttc chars=1620 -> target=_sage_subset.ttf
+[subset] CJK subset -> 935 KB
+[subset] coverage OK: every rendered char is in the subset (no fallback font will be embedded)
+[subset] wrote E:\Program\MARL\SAGE\_sage_subset.ttf (935 KB, from 18.8 MB)
+
+[*] 11_论文成稿进度地图.md  (12041 chars)
+    -> E:\Program\MARL\SAGE\pdf\11_论文成稿进度地图.pdf  (1219 KB, engine=pymupdf)
+[*] 13_Section2_Literature_Review_en.md  (65685 chars)
+    -> E:\Program\MARL\SAGE\pdf\13_Section2_Literature_Review_en.pdf  (1554 KB, engine=pymupdf)
+[*] 18_密码学方向迁移_评估与方案.md  (4778 chars)
+    -> E:\Program\MARL\SAGE\pdf\18_密码学方向迁移_评估与方案.pdf  (1046 KB, engine=pymupdf)
+[*] 26_四库交叉核验与方向锐评.md  (15690 chars)
+    -> E:\Program\MARL\SAGE\pdf\26_四库交叉核验与方向锐评.pdf  (1249 KB, engine=pymupdf)
+[*] 27_投稿前检查清单_双盲.md  (2893 chars)
+    -> E:\Program\MARL\SAGE\pdf\27_投稿前检查清单_双盲.pdf  (1016 KB, engine=pymupdf)
+
+[done] 5 ok, 0 failed
+  output dir: E:\Program\MARL\SAGE\pdf

@@ -1,0 +1,37 @@
+========================================================================================================
+[A9] sensitivity of lambda* to the three unverified A9 constants
+[A9] seeds=20 learners=200 problems=15 bootstrap=200
+========================================================================================================
+
+### sharpness  (field `collapse_sharpness`, reference 0.04)
+  value |  theta |   lam* |       boot lam* |   gain* |     left |    right |  attr | verdict
+--------------------------------------------------------------------------------------------------------
+  0.020 |  0.148 |   0.35 |    0.33+-0.02  |  0.5101 |  +0.3909 |  +0.3187 |  86% | SUPPORTED
+  0.040 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED
+  0.080 |  0.135 |   0.25 |    0.26+-0.02  |  0.4619 |  +0.3417 |  +0.2643 |  84% | SUPPORTED
+  0.150 |  0.120 |   0.30 |    0.28+-0.03  |  0.4300 |  +0.3109 |  +0.2012 |  83% | SUPPORTED
+  equivariance — scaled about the boundary (width in units of s):
+  value |  lam* (grid) | lam* in ref-width units |   gain* |    right |  attr | verdict
+--------------------------------------------------------------------------------------------------------
+  0.020 |         0.33 |                 0.2500 |  0.5125 |  +0.3158 |  88% | SUPPORTED
+  0.040 |         0.30 |                 0.3000 |  0.4957 |  +0.3040 |  86% | SUPPORTED
+  0.080 |         0.30 |                 0.3500 |  0.4589 |  +0.2671 |  80% | SUPPORTED
+  0.150 |         0.21 |                 0.3500 |  0.4101 |  +0.2181 |  79% | SUPPORTED
+  -> lambda* over non-structural values: [0.35, 0.3, 0.25, 0.3]
+  -> spread, grid units       = 0.10
+  -> spread, invariant units  = 0.10
+  -> SUPPORTED for 4/4 non-structural values
+  -> attribution share range  = 83% – 86%
+
+========================================================================================================
+OVERALL
+========================================================================================================
+  sharpness  lambda* spread 0.10 over 4 values | SUPPORTED 4/4 | attribution 83%-86%
+
+  Reading: the EXISTENCE of the boundary and the ATTRIBUTION SHARE
+  should be stable across every A9 value. The LOCATION of lambda* is
+  expected to move and must be reported as an interval, not a point.
+
+[A9] json -> .\m2_a9_sensitivity_v2.json
+[A9] csv  -> .\m2_a9_sensitivity_v2.csv
+A9_sharpness_EXIT=0

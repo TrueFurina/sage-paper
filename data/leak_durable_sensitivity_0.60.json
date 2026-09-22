@@ -1,0 +1,30 @@
+{
+  "config": {
+    "seeds": 40,
+    "learners": 240,
+    "problems": 25,
+    "values": "0.60",
+    "tag": "0.60"
+  },
+  "results": [
+    {
+      "leak_durable": 0.6,
+      "theta": 2.1611,
+      "lambda_star": 0.3,
+      "gain_star": 0.5938,
+      "left_effect": 0.4451,
+      "right_effect": 0.3276,
+      "control_left_effect": 0.3323,
+      "attributable_share": 0.2535,
+      "verdict": "REJECTED",
+      "notes": [
+        "P1 boundary located at lambda=0.3 (index 11 of 0..18): PASS",
+        "P2 rising side: gain 0.1487 -> 0.5938 (delta +0.4451, need >= 0.02): PASS",
+        "P3 falling side beyond the boundary: gain 0.5938 -> 0.2662 (delta +0.3276, need >= 0.02): PASS",
+        "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.3323, observed=+0.4451, scaffolding share=25% (need >= 50%): FAIL",
+        "P4 CI separation vs lambda=0: PASS (opt low 0.5919 vs base high 0.1502) [recorded, non-binding]",
+        "P5 CI separation vs lambda_max: PASS (opt low 0.5919 vs max high 0.2677) [recorded, non-binding]"
+      ]
+    }
+  ]
+}

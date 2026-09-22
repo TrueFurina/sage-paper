@@ -1,0 +1,67 @@
+{
+  "config": {
+    "seeds": 8,
+    "learners": 240,
+    "problems": 8,
+    "values": "0.012,0.30,0.50"
+  },
+  "results": [
+    {
+      "leak_durable": 0.012,
+      "theta": 0.0,
+      "lambda_star": 0.3,
+      "gain_star": 0.4074,
+      "left_effect": 0.2962,
+      "right_effect": 0.265,
+      "control_left_effect": 0.0551,
+      "attributable_share": 0.8138,
+      "verdict": "SUPPORTED",
+      "notes": [
+        "P1 boundary located at lambda=0.3 (index 11 of 0..18): PASS",
+        "P2 rising side: gain 0.1113 -> 0.4074 (delta +0.2962, need >= 0.02): PASS",
+        "P3 falling side beyond the boundary: gain 0.4074 -> 0.1424 (delta +0.2650, need >= 0.02): PASS",
+        "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0551, observed=+0.2962, scaffolding share=81% (need >= 50%): PASS",
+        "P4 CI separation vs lambda=0: PASS (opt low 0.4036 vs base high 0.1163) [recorded, non-binding]",
+        "P5 CI separation vs lambda_max: PASS (opt low 0.4036 vs max high 0.1464) [recorded, non-binding]"
+      ]
+    },
+    {
+      "leak_durable": 0.3,
+      "theta": 0.7618,
+      "lambda_star": 0.25,
+      "gain_star": 0.4375,
+      "left_effect": 0.293,
+      "right_effect": 0.2961,
+      "control_left_effect": 0.0986,
+      "attributable_share": 0.6636,
+      "verdict": "SUPPORTED",
+      "notes": [
+        "P1 boundary located at lambda=0.25 (index 10 of 0..18): PASS",
+        "P2 rising side: gain 0.1445 -> 0.4375 (delta +0.2930, need >= 0.02): PASS",
+        "P3 falling side beyond the boundary: gain 0.4375 -> 0.1414 (delta +0.2961, need >= 0.02): PASS",
+        "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0986, observed=+0.2930, scaffolding share=66% (need >= 50%): PASS",
+        "P4 CI separation vs lambda=0: PASS (opt low 0.4334 vs base high 0.1498) [recorded, non-binding]",
+        "P5 CI separation vs lambda_max: PASS (opt low 0.4334 vs max high 0.1459) [recorded, non-binding]"
+      ]
+    },
+    {
+      "leak_durable": 0.5,
+      "theta": 1.082,
+      "lambda_star": 0.25,
+      "gain_star": 0.4509,
+      "left_effect": 0.3025,
+      "right_effect": 0.3087,
+      "control_left_effect": 0.1253,
+      "attributable_share": 0.5859,
+      "verdict": "SUPPORTED",
+      "notes": [
+        "P1 boundary located at lambda=0.25 (index 10 of 0..18): PASS",
+        "P2 rising side: gain 0.1484 -> 0.4509 (delta +0.3025, need >= 0.02): PASS",
+        "P3 falling side beyond the boundary: gain 0.4509 -> 0.1423 (delta +0.3087, need >= 0.02): PASS",
+        "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.1253, observed=+0.3025, scaffolding share=59% (need >= 50%): PASS",
+        "P4 CI separation vs lambda=0: PASS (opt low 0.4446 vs base high 0.1554) [recorded, non-binding]",
+        "P5 CI separation vs lambda_max: PASS (opt low 0.4446 vs max high 0.1467) [recorded, non-binding]"
+      ]
+    }
+  ]
+}

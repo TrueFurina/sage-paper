@@ -1,0 +1,188 @@
+====================================================================================================
+TARGET: theta                token=0.3578
+  --- MAIN_LOG : 1 hit(s)
+      =240 problems/learner=25 / [M2] fitting answer-channel bias theta (target ALR=0.85 at lambda=0)... / [M2] theta = 0.3578 / ---------------------------------------------------------------------------------------------------- /  lambda 
+  --- LD012 : 1 hit(s)
+        "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.300
+  --- LD_SWEEP_ALL : 1 hit(s)
+        "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.300
+
+====================================================================================================
+TARGET: lam*                 token=0.30
+  --- LD_SWEEP_ALL : 2 hit(s)
+       /       ] /     } /   ] / } / { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.30", /     "tag": "0.30" /   }, /   "results": [ /     { /       "leak_durable": 0.3, /       "theta": 1.8497, /       "lambda
+      } / { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.30", /     "tag": "0.30" /   }, /   "results": [ /     { /       "leak_durable": 0.3, /       "theta": 1.8497, /       "lambda_star": 0.3, /       
+  --- A9_THRESHOLD : 3 hit(s)
+      00 |  0.135 |   0.25 |    0.25+-0.00  |  0.4446 |  +0.3245 |  +0.2530 |  84% | SUPPORTED /   0.400 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   0.500 |  0.148 |   0.35 |    0.37+-0.02
+      5 |   0.25 |    0.25+-0.00  |  0.4446 |  +0.3245 |  +0.2530 |  84% | SUPPORTED /   0.400 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   0.500 |  0.148 |   0.35 |    0.37+-0.02  |  0.519
+      TED /   0.300 |         0.25 |                 0.3500 |  0.4446 |  +0.2516 |  80% | SUPPORTED /   0.400 |         0.30 |                 0.3000 |  0.4957 |  +0.3040 |  86% | SUPPORTED /   0.500 |         0.35 |                 0.2
+  --- A9_DAMPING : 9 hit(s)
+      50 |  0.148 |   0.35 |    0.35+-0.01  |  0.5111 |  +0.3919 |  +0.0468 |  86% | SUPPORTED /   0.500 |  0.148 |   0.30 |    0.30+-0.00  |  0.5000 |  +0.3808 |  +0.1472 |  86% | SUPPORTED /   0.750 |  0.148 |   0.30 |    0.30+-0.00
+      8 |   0.35 |    0.35+-0.01  |  0.5111 |  +0.3919 |  +0.0468 |  86% | SUPPORTED /   0.500 |  0.148 |   0.30 |    0.30+-0.00  |  0.5000 |  +0.3808 |  +0.1472 |  86% | SUPPORTED /   0.750 |  0.148 |   0.30 |    0.30+-0.00  |  0.495
+      00 |  0.148 |   0.30 |    0.30+-0.00  |  0.5000 |  +0.3808 |  +0.1472 |  86% | SUPPORTED /   0.750 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   1.000 |  0.148 |   0.30 |    0.30+-0.00
+      8 |   0.30 |    0.30+-0.00  |  0.5000 |  +0.3808 |  +0.1472 |  86% | SUPPORTED /   0.750 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   1.000 |  0.148 |   0.30 |    0.30+-0.00  |  0.488
+  --- A9_SHARPNESS : 5 hit(s)
+      20 |  0.148 |   0.35 |    0.33+-0.02  |  0.5101 |  +0.3909 |  +0.3187 |  86% | SUPPORTED /   0.040 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   0.080 |  0.135 |   0.25 |    0.26+-0.02
+      8 |   0.35 |    0.33+-0.02  |  0.5101 |  +0.3909 |  +0.3187 |  86% | SUPPORTED /   0.040 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   0.080 |  0.135 |   0.25 |    0.26+-0.02  |  0.461
+      80 |  0.135 |   0.25 |    0.26+-0.02  |  0.4619 |  +0.3417 |  +0.2643 |  84% | SUPPORTED /   0.150 |  0.120 |   0.30 |    0.28+-0.03  |  0.4300 |  +0.3109 |  +0.2012 |  83% | SUPPORTED /   equivariance — scaled about the boundar
+      --- /   0.020 |         0.33 |                 0.2500 |  0.5125 |  +0.3158 |  88% | SUPPORTED /   0.040 |         0.30 |                 0.3000 |  0.4957 |  +0.3040 |  86% | SUPPORTED /   0.080 |         0.30 |                 0.3
+
+====================================================================================================
+TARGET: lam* interval lo     token=0.20
+  --- LD_SWEEP_ALL : 2 hit(s)
+       /       ] /     } /   ] / } / { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.20", /     "tag": "0.20" /   }, /   "results": [ /     { /       "leak_durable": 0.2, /       "theta": 1.5467, /       "lambda
+      } / { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.20", /     "tag": "0.20" /   }, /   "results": [ /     { /       "leak_durable": 0.2, /       "theta": 1.5467, /       "lambda_star": 0.3, /       
+  --- A9_THRESHOLD : 6 hit(s)
+      ---------------------------------------------------------------------------------------- /   0.200 |  0.135 |   0.20 |    0.20+-0.01  |  0.3390 |  +0.2189 |  +0.1476 |  76% | SUPPORTED /   0.250 |  0.143 |   0.20 |    0.20+-0.00
+      ------------------------------------------------------------------------------ /   0.200 |  0.135 |   0.20 |    0.20+-0.01  |  0.3390 |  +0.2189 |  +0.1476 |  76% | SUPPORTED /   0.250 |  0.143 |   0.20 |    0.20+-0.00  |  0.399
+      00 |  0.135 |   0.20 |    0.20+-0.01  |  0.3390 |  +0.2189 |  +0.1476 |  76% | SUPPORTED /   0.250 |  0.143 |   0.20 |    0.20+-0.00  |  0.3997 |  +0.2797 |  +0.2082 |  81% | SUPPORTED /   0.300 |  0.135 |   0.25 |    0.25+-0.00
+      5 |   0.20 |    0.20+-0.01  |  0.3390 |  +0.2189 |  +0.1476 |  76% | SUPPORTED /   0.250 |  0.143 |   0.20 |    0.20+-0.00  |  0.3997 |  +0.2797 |  +0.2082 |  81% | SUPPORTED /   0.300 |  0.135 |   0.25 |    0.25+-0.00  |  0.444
+  --- SELFTEST : 1 hit(s)
+      25) theta= 1.51 peak=0.545@0.25  alr0=0.850 SUPPORTED           expect=REJECTED / ok   M4 easy solve threshold (0.20)               theta= 0.45 peak=0.573@0.25  alr0=0.849 SUPPORTED           expect=SUPPORTED / ok   M5 no delive
+
+====================================================================================================
+TARGET: lam* interval hi     token=0.45
+  --- LD_SWEEP_ALL : 3 hit(s)
+       /       ] /     } /   ] / } / { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.45", /     "tag": "0.45" /   }, /   "results": [ /     { /       "leak_durable": 0.45, /       "theta": 2.0351, /       "lambd
+      } / { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.45", /     "tag": "0.45" /   }, /   "results": [ /     { /       "leak_durable": 0.45, /       "theta": 2.0351, /       "lambda_star": 0.3, /      
+      , /     "problems": 25, /     "values": "0.45", /     "tag": "0.45" /   }, /   "results": [ /     { /       "leak_durable": 0.45, /       "theta": 2.0351, /       "lambda_star": 0.3, /       "gain_star": 0.5911, /       "left_effect": 0.4407, /    
+  --- A9_THRESHOLD : 3 hit(s)
+      00 |  0.148 |   0.35 |    0.37+-0.02  |  0.5191 |  +0.3999 |  +0.3252 |  87% | SUPPORTED /   0.600 |  0.148 |   0.45 |    0.44+-0.02  |  0.5365 |  +0.4173 |  +0.3390 |  87% | SUPPORTED /   5.000 |  0.148 |   0.60 |    0.64+-0.07
+      TED /   0.500 |         0.35 |                 0.2500 |  0.5191 |  +0.3256 |  97% | SUPPORTED /   0.600 |         0.45 |                 0.2500 |  0.5365 |  +0.3438 |  93% | SUPPORTED /   -> lambda* over non-structural values: [0.
+       |  0.5365 |  +0.3438 |  93% | SUPPORTED /   -> lambda* over non-structural values: [0.2, 0.2, 0.25, 0.3, 0.35, 0.45] /   -> spread, grid units       = 0.25 /   -> spread, invariant units  = 0.15 /   -> SUPPORTED for 6/6 non-structu
+  --- SELFTEST : 1 hit(s)
+      0.25  alr0=0.850 SUPPORTED           expect=REJECTED / ok   M4 easy solve threshold (0.20)               theta= 0.45 peak=0.573@0.25  alr0=0.849 SUPPORTED           expect=SUPPORTED / ok   M5 no delivery damping (0.0)           
+  --- SUMMARY16 : 2 hit(s)
+          0.02, /     0.03, /     0.05, /     0.08, /     0.1, /     0.15, /     0.2, /     0.25, /     0.3, /     0.35, /     0.4, /     0.45, /     0.5, /     0.6, /     0.7, /     0.8 /   ], /   "summary": [ /     { /       "lambda": 0.0, /       "alr_mean": 0.851106
+      0.5598470052083333, /       "mi_mean": 3.0, /       "mastery_mean": 0.65792513781497 /     }, /     { /       "lambda": 0.45, /       "alr_mean": 0.019840494791666666, /       "alr_lo": 0.01884200407826791, /       "alr_hi": 0.0208389855050
+
+====================================================================================================
+TARGET: gain* peak           token=0.5659
+  --- MAIN_LOG : 3 hit(s)
+      ,0.156] | 0.5472 [0.545,0.549] | 0.1266 [0.125,0.128] | 0.3263 [0.324,0.328] /   0.300 | 0.0863 [0.085,0.088] | 0.5659 [0.564,0.568] | 0.0733 [0.072,0.075] | 0.3608 [0.359,0.363] /   0.350 | 0.0519 [0.051,0.053] | 0.5502 [0.549,0.
+      mbda=0.8 /      P1 boundary located at lambda=0.3 (index 11 of 0..18): PASS /      P2 rising side: gain 0.1279 -> 0.5659 (delta +0.4380, need >= 0.02): PASS /      P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0
+      ide: gain 0.1279 -> 0.5659 (delta +0.4380, need >= 0.02): PASS /      P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS /      P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.05
+  --- LD012 : 3 hit(s)
+      ts": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attrib
+             "P1 boundary located at lambda=0.3 (index 11 of 0..18): PASS", /         "P2 rising side: gain 0.1279 -> 0.5659 (delta +0.4380, need >= 0.02): PASS", /         "P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (de
+      ain 0.1279 -> 0.5659 (delta +0.4380, need >= 0.02): PASS", /         "P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect
+  --- LD_SWEEP_ALL : 3 hit(s)
+      ts": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attrib
+             "P1 boundary located at lambda=0.3 (index 11 of 0..18): PASS", /         "P2 rising side: gain 0.1279 -> 0.5659 (delta +0.4380, need >= 0.02): PASS", /         "P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (de
+      ain 0.1279 -> 0.5659 (delta +0.4380, need >= 0.02): PASS", /         "P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect
+
+====================================================================================================
+TARGET: left_effect          token=0.438
+  --- LD012 : 1 hit(s)
+      ble": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /      
+  --- LD_SWEEP_ALL : 1 hit(s)
+      ble": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /      
+  --- SELFTEST : 1 hit(s)
+      | 0.3929 [0.390,0.395] /   0.350 | 0.0517 [0.050,0.053] | 0.5155 [0.513,0.519] | 0.0431 [0.042,0.044] | 0.4414 [0.438,0.444] /   0.400 | 0.0301 [0.029,0.031] | 0.4498 [0.448,0.452] | 0.0248 [0.024,0.026] | 0.5254 [0.523,0.528] /   
+
+====================================================================================================
+TARGET: right_effect         token=0.3008
+  --- MAIN_LOG : 1 hit(s)
+      9 (delta +0.4380, need >= 0.02): PASS /      P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS /      P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, sca
+  --- LD012 : 2 hit(s)
+      .3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /       "verdict": "SUPPORTED", /      
+      ta +0.4380, need >= 0.02): PASS", /         "P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.438
+  --- LD_SWEEP_ALL : 2 hit(s)
+      .3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /       "verdict": "SUPPORTED", /      
+      ta +0.4380, need >= 0.02): PASS", /         "P3 falling side beyond the boundary: gain 0.5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.438
+
+====================================================================================================
+TARGET: control_left         token=0.0594
+  --- MAIN_LOG : 1 hit(s)
+      5659 -> 0.2651 (delta +0.3008, need >= 0.02): PASS /      P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, scaffolding share=86% (need >= 50%): PASS /      P4 CI separation vs lambda=0: PASS (opt low
+  --- LD012 : 2 hit(s)
+        "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /       "verdict": "SUPPORTED", /       "notes": [ /         "P1 boundary loca
+      > 0.2651 (delta +0.3008, need >= 0.02): PASS", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, scaffolding share=86% (need >= 50%): PASS", /         "P4 CI separation vs lambda=0: PASS (o
+  --- LD_SWEEP_ALL : 2 hit(s)
+        "gain_star": 0.5659, /       "left_effect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /       "verdict": "SUPPORTED", /       "notes": [ /         "P1 boundary loca
+      > 0.2651 (delta +0.3008, need >= 0.02): PASS", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, scaffolding share=86% (need >= 50%): PASS", /         "P4 CI separation vs lambda=0: PASS (o
+
+====================================================================================================
+TARGET: share                token=0.8645
+  --- LD012 : 1 hit(s)
+      ffect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /       "verdict": "SUPPORTED", /       "notes": [ /         "P1 boundary located at lambda=0.3 (index 11 of 0..18
+  --- LD_SWEEP_ALL : 1 hit(s)
+      ffect": 0.438, /       "right_effect": 0.3008, /       "control_left_effect": 0.0594, /       "attributable_share": 0.8645, /       "verdict": "SUPPORTED", /       "notes": [ /         "P1 boundary located at lambda=0.3 (index 11 of 0..18
+
+====================================================================================================
+TARGET: share %              token=86
+  --- MAIN_LOG : 1 hit(s)
+      : PASS /      P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, scaffolding share=86% (need >= 50%): PASS /      P4 CI separation vs lambda=0: PASS (opt low 0.5638 vs base high 0.1294) [recorded, 
+  --- LD012 : 1 hit(s)
+      ", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, scaffolding share=86% (need >= 50%): PASS", /         "P4 CI separation vs lambda=0: PASS (opt low 0.5638 vs base high 0.1294) [reco
+  --- LD_SWEEP_ALL : 1 hit(s)
+      ", /         "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0594, observed=+0.4380, scaffolding share=86% (need >= 50%): PASS", /         "P4 CI separation vs lambda=0: PASS (opt low 0.5638 vs base high 0.1294) [reco
+  --- A9_THRESHOLD : 2 hit(s)
+      5 |  +0.2530 |  84% | SUPPORTED /   0.400 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   0.500 |  0.148 |   0.35 |    0.37+-0.02  |  0.5191 |  +0.3999 |  +0.3252 |  87% | SUPPORTED /   
+       0.4446 |  +0.2516 |  80% | SUPPORTED /   0.400 |         0.30 |                 0.3000 |  0.4957 |  +0.3040 |  86% | SUPPORTED /   0.500 |         0.35 |                 0.2500 |  0.5191 |  +0.3256 |  97% | SUPPORTED /   0.600 
+  --- A9_DAMPING : 8 hit(s)
+      ------------------------------- /   0.250 |  0.148 |   0.35 |    0.35+-0.01  |  0.5111 |  +0.3919 |  +0.0468 |  86% | SUPPORTED /   0.500 |  0.148 |   0.30 |    0.30+-0.00  |  0.5000 |  +0.3808 |  +0.1472 |  86% | SUPPORTED /   
+      9 |  +0.0468 |  86% | SUPPORTED /   0.500 |  0.148 |   0.30 |    0.30+-0.00  |  0.5000 |  +0.3808 |  +0.1472 |  86% | SUPPORTED /   0.750 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   
+      8 |  +0.1472 |  86% | SUPPORTED /   0.750 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   1.000 |  0.148 |   0.30 |    0.30+-0.00  |  0.4888 |  +0.3696 |  +0.4585 |  86% | SUPPORTED /   
+      5 |  +0.3040 |  86% | SUPPORTED /   1.000 |  0.148 |   0.30 |    0.30+-0.00  |  0.4888 |  +0.3696 |  +0.4585 |  86% | SUPPORTED /   1.250 |  0.148 |   0.30 |    0.30+-0.00  |  0.4863 |  +0.3671 |  +0.4764 |  86% | SUPPORTED /   
+  --- A9_SHARPNESS : 4 hit(s)
+      ------------------------------- /   0.020 |  0.148 |   0.35 |    0.33+-0.02  |  0.5101 |  +0.3909 |  +0.3187 |  86% | SUPPORTED /   0.040 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   
+      9 |  +0.3187 |  86% | SUPPORTED /   0.040 |  0.148 |   0.30 |    0.30+-0.00  |  0.4957 |  +0.3765 |  +0.3040 |  86% | SUPPORTED /   0.080 |  0.135 |   0.25 |    0.26+-0.02  |  0.4619 |  +0.3417 |  +0.2643 |  84% | SUPPORTED /   
+       0.5125 |  +0.3158 |  88% | SUPPORTED /   0.040 |         0.30 |                 0.3000 |  0.4957 |  +0.3040 |  86% | SUPPORTED /   0.080 |         0.30 |                 0.3500 |  0.4589 |  +0.2671 |  80% | SUPPORTED /   0.150 
+      d, invariant units  = 0.10 /   -> SUPPORTED for 4/4 non-structural values /   -> attribution share range  = 83% – 86% /  / ======================================================================================================== / OV
+  --- DF : 5 hit(s)
+      SS", /       "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0531, observed=+0.3846, scaffolding share=86% (need >= 50%): PASS", /       "P4 CI separation vs lambda=0: PASS (opt low 0.5014 vs base high 0.1239) [record
+      SS", /       "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0531, observed=+0.3765, scaffolding share=86% (need >= 50%): PASS", /       "P4 CI separation vs lambda=0: PASS (opt low 0.4923 vs base high 0.1216) [record
+      SS", /       "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0531, observed=+0.3767, scaffolding share=86% (need >= 50%): PASS", /       "P4 CI separation vs lambda=0: PASS (opt low 0.4933 vs base high 0.1221) [record
+      SS", /       "P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0531, observed=+0.3787, scaffolding share=86% (need >= 50%): PASS", /       "P4 CI separation vs lambda=0: PASS (opt low 0.4933 vs base high 0.1206) [record
+  --- SELFTEST : 1 hit(s)
+      : PASS /      P6 ATTRIBUTION: control (no scaffolding) left_effect=+0.0577, observed=+0.4120, scaffolding share=86% (need >= 50%): PASS /      P4 CI separation vs lambda=0: PASS (opt low 0.5326 vs base high 0.1270) [recorded, 
+
+====================================================================================================
+TARGET: share lo             token=76
+  --- A9_THRESHOLD : 3 hit(s)
+      ------------------------------- /   0.200 |  0.135 |   0.20 |    0.20+-0.01  |  0.3390 |  +0.2189 |  +0.1476 |  76% | SUPPORTED /   0.250 |  0.143 |   0.20 |    0.20+-0.00  |  0.3997 |  +0.2797 |  +0.2082 |  81% | SUPPORTED /   
+       spread, invariant units  = 0.15 /   -> SUPPORTED for 6/6 non-structural values /   -> attribution share range  = 76% – 88% /  / =====================================================================================================
+      ================================ /   threshold  lambda* spread 0.25 over 6 values | SUPPORTED 6/6 | attribution 76%-88% /  /   Reading: the EXISTENCE of the boundary and the ATTRIBUTION SHARE /   should be stable across every A9 v
+
+====================================================================================================
+TARGET: share hi             token=88
+  --- A9_THRESHOLD : 2 hit(s)
+      3 |  +0.3390 |  87% | SUPPORTED /   5.000 |  0.148 |   0.60 |    0.64+-0.07  |  0.5449 |  +0.4257 |  +0.0029 |  88% | REJECTED  (structural: excluded from spread) /   equivariance — shifted (lambda - lc constant): /   value |  l
+      d, invariant units  = 0.15 /   -> SUPPORTED for 6/6 non-structural values /   -> attribution share range  = 76% – 88% /  / ======================================================================================================== / OV
+  --- A9_DAMPING : 2 hit(s)
+      1 |  +0.4764 |  86% | SUPPORTED /   0.000 |  0.148 |   0.60 |    0.64+-0.07  |  0.5449 |  +0.4257 |  +0.0029 |  88% | REJECTED  (structural: excluded from spread) /   equivariance — grid solved so the DELIVERED fraction is con
+      d, invariant units  = 0.00 /   -> SUPPORTED for 5/5 non-structural values /   -> attribution share range  = 86% – 88% /  / ======================================================================================================== / OV
+  --- A9_SHARPNESS : 1 hit(s)
+      ------------------------------------- /   0.020 |         0.33 |                 0.2500 |  0.5125 |  +0.3158 |  88% | SUPPORTED /   0.040 |         0.30 |                 0.3000 |  0.4957 |  +0.3040 |  86% | SUPPORTED /   0.080 
+
+====================================================================================================
+TARGET: instr-leak share     token=43
+  !! NO SOURCE IN ANY CONTAINER
+
+====================================================================================================
+TARGET: leak_durable base    token=0.012
+  --- MAIN_LOG : 1 hit(s)
+      99 [0.019,0.020] | 0.3862 [0.384,0.388] | 0.0165 [0.016,0.017] | 0.5973 [0.595,0.599] /   0.500 | 0.0118 [0.011,0.012] | 0.3117 [0.310,0.314] | 0.0096 [0.009,0.010] | 0.6788 [0.677,0.681] /   0.600 | 0.0038 [0.004,0.004] | 0.2705
+  --- LD012 : 3 hit(s)
+      { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lam
+      { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /     
+          "problems": 25, /     "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /     
+  --- LD_SWEEP_ALL : 3 hit(s)
+      { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lam
+      { /   "config": { /     "seeds": 40, /     "learners": 240, /     "problems": 25, /     "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /     
+          "problems": 25, /     "values": "0.012", /     "tag": "0.012" /   }, /   "results": [ /     { /       "leak_durable": 0.012, /       "theta": 0.3578, /       "lambda_star": 0.3, /       "gain_star": 0.5659, /       "left_effect": 0.438, /     
+  --- SELFTEST : 1 hit(s)
+      94 [0.019,0.020] | 0.3506 [0.348,0.353] | 0.0158 [0.015,0.016] | 0.6337 [0.631,0.636] /   0.500 | 0.0118 [0.011,0.012] | 0.2740 [0.271,0.277] | 0.0094 [0.009,0.010] | 0.7166 [0.714,0.719] /   0.600 | 0.0036 [0.003,0.004] | 0.2372
+  --- SUMMARY16 : 1 hit(s)
+         "collapse_threshold": 0.4, /     "collapse_sharpness": 0.04, /     "leak_immediate": 0.35, /     "leak_durable": 0.012, /     "leak_dependency": 0.2, /     "solve_steepness": 7.0, /     "solve_threshold": 0.62, /     "n_attempts": 6 /   }
+
+====================================================================================================
+TARGET: gain beyond bnd      token=0.265
+  --- MAIN_LOG : 1 hit(s)
+      ary located at lambda=0.3 (gain=0.566) /     ok   G5: crossing the boundary degrades gain (0.566 at boundary -> 0.265 at lambda=0.8) /  / [M2] Proposition 1 diagnostic (a withholding BOUNDARY, not a smooth optimum): /      ALR: max 0
+
+====================================================================================================
+TARGET: mutants              token=13
+  --- SELFTEST : 1 hit(s)
+      ting it CHANGES the reported gain (must change; a no-op mutation proves the parameter is dead) /  / [SELFTEST] 12/13 mutation checks passed / [SELFTEST] FAILURES: /            - M3 answer leaks DO teach (leak_durable=0.25) /  / [SELFT

@@ -1,0 +1,17 @@
+============================================================================================
+[THRESHOLD-MUTANT CHECK] is `collapse_threshold` load-bearing?
+[THRESHOLD-MUTANT CHECK] seeds=10 learners=120 problems=12
+============================================================================================
+  BASELINE      theta-fit done | peak=0.4692@0.3 | SUPPORTED
+
+ok   M8 threshold beyond grid (no collapse)         peak=0.5141@0.7   attr=86%   REJECTED  expect=REJECTED
+ok   M9 threshold at far left (crippled throughout) peak=0.1964@0.25  attr=47%   REJECTED  expect=REJECTED
+ok   M5 collapse depth zero (no delivery loss)      peak=0.5141@0.7   attr=86%   REJECTED  expect=REJECTED
+ok   SANITY threshold 0.55 (still reachable)        peak=0.4998@0.4   attr=86%   SUPPORTED  expect=SUPPORTED
+ok   M3 leaks DO teach, beyond flip (0.50)          peak=0.4944@0.25  attr=43%   REJECTED  expect=REJECTED
+ok   M3 below flip: leaks teach moderately (0.35)   peak=0.4925@0.25  attr=55%   SUPPORTED  expect=SUPPORTED
+
+ok   LIVENESS collapse_threshold: mutating it CHANGES the reported gain (must change; a no-op mutation proves the parameter is dead)
+
+[THRESHOLD-MUTANT CHECK] 7/7 passed
+[THRESHOLD-MUTANT CHECK] the threshold mechanism is load-bearing: removing it, or moving the boundary out of range in either direction, changes the conclusion, and mutating it changes the numbers.
